@@ -9,7 +9,7 @@ package System;
  * @author Yo200
  */
 public class PotentialTenant extends Customer{
-    //@usmani
+
     private final String GuestID;
     
     public PotentialTenant(String gID) {

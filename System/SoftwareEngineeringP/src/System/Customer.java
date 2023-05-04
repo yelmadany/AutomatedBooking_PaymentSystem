@@ -9,9 +9,7 @@ package System;
  * @author Yo200
  */
 public class Customer {
-    //@Usmani
     
-    //Add attributes
     private String Name;
     private int Phone_Number;
     private String Email_Address;

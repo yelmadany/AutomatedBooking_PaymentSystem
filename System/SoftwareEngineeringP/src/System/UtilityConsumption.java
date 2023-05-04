@@ -11,9 +11,7 @@ import java.util.Date;
  * @author Yo200
  */
 public class UtilityConsumption {
-    //@usmani
-    
-    //add attributes, connect with Store
+
     private double Water_Consumption;
     private double Electricity_Consumption;
     private double Waste_Consumption;
@@ -33,7 +31,6 @@ public class UtilityConsumption {
         this.store = s;
         this.Total_Utility_Price = Electricity_Consumption + Waste_Consumption + Water_Consumption;
     }
-    //implement functions
     public double GetTotalUtilityPrice(Date d) {
         return this.Total_Utility_Price;
     }

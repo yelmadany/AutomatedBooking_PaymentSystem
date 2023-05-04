@@ -10,7 +10,7 @@ import java.util.Date;
  * @author Yo200
  */
 public class Tenant extends Customer{
-    //@usmani
+
     
     //add attributes
     private String TenantID;
@@ -22,7 +22,5 @@ public class Tenant extends Customer{
         this.Lease_Contract = new ArrayList();
         this.Card = new ArrayList();
     }
-    //connect with card and lease contract
-    
-    //make it a child
+
 }
