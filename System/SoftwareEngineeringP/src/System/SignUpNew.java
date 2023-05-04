@@ -1,19 +1,21 @@
+package System;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package System;
+
 
 /**
  *
  * @author Yo200
  */
-public class Login extends javax.swing.JFrame {
+public class SignUpNew extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public Login() {
+    public SignUpNew() {
         initComponents();
     }
 
@@ -29,23 +31,38 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jPanel6 = new javax.swing.JPanel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        jTextField4 = new javax.swing.JTextField();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jPasswordField2 = new javax.swing.JPasswordField();
         jPanel8 = new javax.swing.JPanel();
         jTextField3 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jPanel11 = new javax.swing.JPanel();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel20 = new javax.swing.JPanel();
+        jTextField6 = new javax.swing.JTextField();
+        jPanel21 = new javax.swing.JPanel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jTextField8 = new javax.swing.JTextField();
+        jPanel23 = new javax.swing.JPanel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel24 = new javax.swing.JPanel();
+        jTextField10 = new javax.swing.JTextField();
+        jPanel25 = new javax.swing.JPanel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
@@ -57,6 +74,7 @@ public class Login extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 706, 516));
@@ -67,53 +85,35 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 516));
 
         jPanel3.setOpaque(false);
-        jPanel3.setPreferredSize(new java.awt.Dimension(400, 200));
+        jPanel3.setPreferredSize(new java.awt.Dimension(400, 35));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Welcome Back");
-
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\abdto\\Downloads\\image.png")); // NOI18N
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addGap(49, 49, 49))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jLabel1.setText("Sign Up");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(168, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(136, 136, 136))
-            .addComponent(jPanel18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(164, 164, 164))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);
 
-        jPanel7.setPreferredSize(new java.awt.Dimension(706, 150));
+        jPanel7.setMinimumSize(new java.awt.Dimension(410, 100));
+        jPanel7.setPreferredSize(new java.awt.Dimension(400, 340));
 
         jPanel4.setMinimumSize(new java.awt.Dimension(400, 100));
-        jPanel4.setPreferredSize(new java.awt.Dimension(400, 150));
+        jPanel4.setPreferredSize(new java.awt.Dimension(400, 375));
 
         jPanel5.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel5.setLayout(new java.awt.BorderLayout(5, 5));
@@ -125,22 +125,49 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel5.add(jTextField1, java.awt.BorderLayout.CENTER);
 
-        jPanel6.setPreferredSize(new java.awt.Dimension(300, 50));
-        jPanel6.setLayout(new java.awt.BorderLayout(5, 5));
+        jPanel19.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel19.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jTextField5ActionPerformed(evt);
             }
         });
-        jPanel6.add(jTextField2, java.awt.BorderLayout.CENTER);
+        jPanel19.add(jTextField5, java.awt.BorderLayout.CENTER);
 
-        jLabel3.setText("Username");
-        jPanel6.add(jLabel3, java.awt.BorderLayout.PAGE_START);
+        jLabel8.setText("Username");
+        jPanel19.add(jLabel8, java.awt.BorderLayout.PAGE_START);
 
-        jPanel5.add(jPanel6, java.awt.BorderLayout.PAGE_END);
+        jPanel5.add(jPanel19, java.awt.BorderLayout.PAGE_END);
 
         jPanel4.add(jPanel5);
+
+        jPanel11.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel11.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        jPanel11.add(jTextField4, java.awt.BorderLayout.CENTER);
+
+        jPanel18.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel18.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jLabel6.setText("Password");
+        jPanel18.add(jLabel6, java.awt.BorderLayout.PAGE_START);
+
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(jPasswordField2, java.awt.BorderLayout.CENTER);
+
+        jPanel11.add(jPanel18, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.add(jPanel11);
 
         jPanel8.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel8.setLayout(new java.awt.BorderLayout(5, 5));
@@ -155,7 +182,7 @@ public class Login extends javax.swing.JFrame {
         jPanel9.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel9.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jLabel5.setText("Password");
+        jLabel5.setText("Confirm Password");
         jPanel9.add(jLabel5, java.awt.BorderLayout.PAGE_START);
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -169,21 +196,86 @@ public class Login extends javax.swing.JFrame {
 
         jPanel4.add(jPanel8);
 
-        jPanel11.setPreferredSize(new java.awt.Dimension(300, 25));
-        jPanel11.setLayout(new java.awt.BorderLayout());
+        jPanel20.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel20.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jCheckBox2.setText("Remember me");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                jTextField6ActionPerformed(evt);
             }
         });
-        jPanel11.add(jCheckBox2, java.awt.BorderLayout.WEST);
+        jPanel20.add(jTextField6, java.awt.BorderLayout.CENTER);
 
-        jLabel2.setText("Forgot Password?");
-        jPanel11.add(jLabel2, java.awt.BorderLayout.EAST);
+        jPanel21.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel21.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jPanel4.add(jPanel11);
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jPanel21.add(jTextField7, java.awt.BorderLayout.CENTER);
+
+        jLabel9.setText("Name");
+        jPanel21.add(jLabel9, java.awt.BorderLayout.PAGE_START);
+
+        jPanel20.add(jPanel21, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.add(jPanel20);
+
+        jPanel22.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel22.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        jPanel22.add(jTextField8, java.awt.BorderLayout.CENTER);
+
+        jPanel23.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel23.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField9ActionPerformed(evt);
+            }
+        });
+        jPanel23.add(jTextField9, java.awt.BorderLayout.CENTER);
+
+        jLabel10.setText("Phone Number");
+        jPanel23.add(jLabel10, java.awt.BorderLayout.PAGE_START);
+
+        jPanel22.add(jPanel23, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.add(jPanel22);
+
+        jPanel24.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel24.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        jPanel24.add(jTextField10, java.awt.BorderLayout.CENTER);
+
+        jPanel25.setPreferredSize(new java.awt.Dimension(300, 50));
+        jPanel25.setLayout(new java.awt.BorderLayout(5, 5));
+
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+        jPanel25.add(jTextField11, java.awt.BorderLayout.CENTER);
+
+        jLabel11.setText("E-mail Address");
+        jPanel25.add(jLabel11, java.awt.BorderLayout.PAGE_START);
+
+        jPanel24.add(jPanel25, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.add(jPanel24);
 
         jPanel7.add(jPanel4);
 
@@ -191,12 +283,12 @@ public class Login extends javax.swing.JFrame {
 
         jPanel10.setPreferredSize(new java.awt.Dimension(400, 300));
 
-        jPanel12.setPreferredSize(new java.awt.Dimension(400, 60));
+        jPanel12.setPreferredSize(new java.awt.Dimension(400, 50));
 
         jButton2.setBackground(new java.awt.Color(79, 220, 83));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("LOGIN");
+        jButton2.setText("CREATE ACCOUNT");
         jButton2.setActionCommand("Login");
         jButton2.setPreferredSize(new java.awt.Dimension(300, 29));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -219,19 +311,19 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel10.add(jPanel12);
 
-        jPanel13.setPreferredSize(new java.awt.Dimension(400, 100));
+        jPanel13.setPreferredSize(new java.awt.Dimension(400, 75));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Don't have an account yet? Sign up.");
+        jLabel4.setText("Already have an account?");
         jLabel4.setPreferredSize(new java.awt.Dimension(300, 16));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("SIGN UP");
+        jButton1.setText("LOGIN");
         jButton1.setPreferredSize(new java.awt.Dimension(300, 29));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -257,7 +349,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel10.add(jPanel13);
@@ -292,7 +384,7 @@ public class Login extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -322,7 +414,7 @@ public class Login extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -331,16 +423,24 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\abdto\\Downloads\\image.png")); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(62, 62, 62)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -351,7 +451,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,10 +469,6 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
@@ -385,13 +481,45 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -431,13 +559,15 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -448,17 +578,31 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
