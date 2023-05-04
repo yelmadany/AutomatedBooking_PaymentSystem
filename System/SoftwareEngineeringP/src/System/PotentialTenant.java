@@ -12,7 +12,8 @@ public class PotentialTenant extends Customer{
 
     private final String GuestID;
     
-    public PotentialTenant(String gID) {
+    public PotentialTenant(String n, int p_num, String email,String gID) {
+        super(n,p_num,email);
         this.GuestID = gID;
     }
 }

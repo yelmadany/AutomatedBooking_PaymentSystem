@@ -17,7 +17,8 @@ public class Tenant extends Customer{
     private ArrayList<LeaseContract> Lease_Contract;
     private ArrayList<Card> Card; 
     
-    public Tenant(String tID) {
+    public Tenant(String n, int p_num, String email, String tID) {
+        super(n, p_num, email);
         this.TenantID = tID;
         this.Lease_Contract = new ArrayList();
         this.Card = new ArrayList();
