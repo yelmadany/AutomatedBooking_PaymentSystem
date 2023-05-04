@@ -10,7 +10,7 @@ package System;
  */
 public class LeasingAgent {
     //add attributes
-    
+    String name;
     //connect with Account, Appointment, and Leasing Office
     
     //implement functions:::
