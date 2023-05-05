@@ -28,7 +28,7 @@ public class AgentSelect extends javax.swing.JFrame {
     private void dpopulate(){
         for(int i = 0; i< L.Agents.size();i++){
              //Sched = L.Agents.get(i).GetAgentSchedule();
-             jComboBox1.addItem(L.Agents.get(i).name); //populate the names
+             AgentComboBox.addItem(L.Agents.get(i).name); //populate the names
              ///populateAgent(Sched);
         }
     }
@@ -46,31 +46,31 @@ public class AgentSelect extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        SelectAgentLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        AgentLabel = new javax.swing.JLabel();
+        AgentComboBox = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        DateLabel = new javax.swing.JLabel();
         DateTxtField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ShowCalendarButton = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        CheckAvailabilityButton = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        AvailableTimeLabel = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        ConfirmApptButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 0)));
         jPanel2.setPreferredSize(new java.awt.Dimension(478, 29));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("SELECT AGENT AND APPOINTMENT TIME");
+        SelectAgentLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        SelectAgentLabel.setText("SELECT AGENT AND APPOINTMENT TIME");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -78,14 +78,14 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(96, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(SelectAgentLabel)
                 .addGap(94, 94, 94))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(SelectAgentLabel)
                 .addContainerGap())
         );
 
@@ -93,11 +93,11 @@ public class AgentSelect extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(250, 250));
 
-        jLabel2.setText("Agent:");
+        AgentLabel.setText("Agent:");
 
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        AgentComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                AgentComboBoxActionPerformed(evt);
             }
         });
 
@@ -107,9 +107,9 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AgentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, 0, 238, Short.MAX_VALUE)
+                .addComponent(AgentComboBox, 0, 238, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -117,12 +117,12 @@ public class AgentSelect extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(AgentComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgentLabel))
                 .addContainerGap())
         );
 
-        jLabel3.setText("Date:");
+        DateLabel.setText("Date:");
 
         DateTxtField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,10 +130,10 @@ public class AgentSelect extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("...");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ShowCalendarButton.setText("...");
+        ShowCalendarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ShowCalendarButtonActionPerformed(evt);
             }
         });
 
@@ -143,11 +143,11 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(DateTxtField)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ShowCalendarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -155,19 +155,19 @@ public class AgentSelect extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(DateLabel)
                     .addComponent(DateTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(ShowCalendarButton))
                 .addContainerGap())
         );
 
-        jButton2.setBackground(new java.awt.Color(0, 128, 236));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("CHECK AVAILABILITY");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        CheckAvailabilityButton.setBackground(new java.awt.Color(0, 128, 236));
+        CheckAvailabilityButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        CheckAvailabilityButton.setForeground(new java.awt.Color(255, 255, 255));
+        CheckAvailabilityButton.setText("CHECK AVAILABILITY");
+        CheckAvailabilityButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                CheckAvailabilityButtonActionPerformed(evt);
             }
         });
 
@@ -177,14 +177,14 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -219,7 +219,7 @@ public class AgentSelect extends javax.swing.JFrame {
 
         jPanel8.setPreferredSize(new java.awt.Dimension(478, 30));
 
-        jLabel4.setText("Available Times: [Select 1]");
+        AvailableTimeLabel.setText("Available Times: [Select 1]");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -227,14 +227,14 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(166, 166, 166)
-                .addComponent(jLabel4)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addComponent(AvailableTimeLabel)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
+                .addComponent(AvailableTimeLabel)
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
@@ -258,14 +258,14 @@ public class AgentSelect extends javax.swing.JFrame {
 
         jPanel9.setPreferredSize(new java.awt.Dimension(478, 50));
 
-        jButton3.setBackground(new java.awt.Color(79, 220, 83));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("CONFIRM APPOINTMENT");
-        jButton3.setEnabled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmApptButton.setBackground(new java.awt.Color(79, 220, 83));
+        ConfirmApptButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ConfirmApptButton.setForeground(new java.awt.Color(255, 255, 255));
+        ConfirmApptButton.setText("CONFIRM APPOINTMENT");
+        ConfirmApptButton.setEnabled(false);
+        ConfirmApptButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ConfirmApptButtonActionPerformed(evt);
             }
         });
 
@@ -275,14 +275,14 @@ public class AgentSelect extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(81, 81, 81)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ConfirmApptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(97, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ConfirmApptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -297,21 +297,21 @@ public class AgentSelect extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DateTxtFieldActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ShowCalendarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowCalendarButtonActionPerformed
       //  dateChooser1.showPopup();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ShowCalendarButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_CheckAvailabilityButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ConfirmApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmApptButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ConfirmApptButtonActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void AgentComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_AgentComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,15 +320,15 @@ public class AgentSelect extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> AgentComboBox;
+    private javax.swing.JLabel AgentLabel;
+    private javax.swing.JLabel AvailableTimeLabel;
+    private javax.swing.JButton CheckAvailabilityButton;
+    private javax.swing.JButton ConfirmApptButton;
+    private javax.swing.JLabel DateLabel;
     private javax.swing.JTextField DateTxtField;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel SelectAgentLabel;
+    private javax.swing.JButton ShowCalendarButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
