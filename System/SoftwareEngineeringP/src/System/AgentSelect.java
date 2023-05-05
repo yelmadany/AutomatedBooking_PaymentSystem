@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 
 public class AgentSelect extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form AgentSelect
      */
@@ -69,6 +69,9 @@ public class AgentSelect extends javax.swing.JFrame {
         CalendarDateChooser.setTextRefernce(DateTxtField);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Agent Selection");
+        setLocation(new java.awt.Point(500, 200));
+        setResizable(false);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 0)));
         jPanel2.setPreferredSize(new java.awt.Dimension(478, 29));
@@ -290,6 +293,8 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void ShowCalendarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowCalendarButtonActionPerformed
         CalendarDateChooser.showPopup();
+        
+        
     }//GEN-LAST:event_ShowCalendarButtonActionPerformed
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
