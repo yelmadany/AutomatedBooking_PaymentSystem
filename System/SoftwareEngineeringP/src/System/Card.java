@@ -10,6 +10,11 @@ package System;
  */
 public class Card {
     //@Usmani
+    String ExpDate;
+    int Card_Numb;
     
-    //Attributes + 
+    public Card(String E_Date, int c_num){
+        ExpDate=E_Date;
+    Card_Numb=c_num;
+    }
 }

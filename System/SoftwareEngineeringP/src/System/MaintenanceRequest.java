@@ -10,6 +10,32 @@ package System;
  */
 public class MaintenanceRequest {
     //@Usmani
+    int ID;
+    String Priority;
+    String Description;
+    double misue_charge;
+    String time;
     
+    public MaintenanceRequest(int _ID, String _Priority, String descp, double m_charge, String _time){
+  
+    ID=_ID;
+    Priority=_Priority;
+    Description=descp;
+    misue_charge=m_charge;
+    time=_time;
+    
+}
+    
+    
+    public double GetMisuseCharges(){
+        //Card C = new Card(CN, Dat);
+     //   return this.misue_charge;
+        //Card C = new Card(CN, Dat);
+        return misue_charge;
+        //Card C = new Card(CN, Dat);
+     //   return this.misue_charge;
+        //Card C = new Card(CN, Dat);
+       
+    }
     //you get the jist of it get on it
 }
