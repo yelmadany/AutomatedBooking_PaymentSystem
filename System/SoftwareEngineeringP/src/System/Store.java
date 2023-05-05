@@ -11,12 +11,12 @@ import java.util.Date;
  * @author Yo200
  */
 public class Store {
-    private String Location;
-    private String Space;
-    private double Rental_rate;
+    public String Location;
+    public String Space;
+    public double Rental_rate;
     private String Classifier;
     private String Purpose;
-    private char Rank;
+    public char Rank;
     private LeaseContract lease_c;
     private ArrayList<MaintenanceRequest> Maint_req;
     private ArrayList<Appointment> Appt;

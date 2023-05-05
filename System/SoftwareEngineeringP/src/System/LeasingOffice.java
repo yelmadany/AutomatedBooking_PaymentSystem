@@ -32,7 +32,7 @@ public class LeasingOffice {
     public void SelectAppDetails(LeasingAgent Ag, String Dat, String Time){
        // Appointment App = new Appointment(Ag, Dat, Time, Cart);
 
-        //Ag.AddAppointment(App,Dat,Time);
+        //Ag.AddAppointment(App);
         //Ag.SendNotif();
         //Display Confirmation Message
     }
@@ -107,7 +107,7 @@ public class LeasingOffice {
         Controller.Stores.add(store10);
         
         //Menu
-        (new MainMenu(Controller.Stores)).setVisible(true);
+        (new MainMenu(Controller)).setVisible(true);
     }
     
 }
