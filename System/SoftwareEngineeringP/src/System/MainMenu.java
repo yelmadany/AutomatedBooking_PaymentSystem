@@ -26,6 +26,7 @@ public class MainMenu extends javax.swing.JFrame {
      * @param Stores
      */
     public MainMenu(LeasingOffice LO) {
+        // maybe we make a new cart window in new page?
         L = LO;
         Cart = new ArrayList<Store>();
         initComponents();
