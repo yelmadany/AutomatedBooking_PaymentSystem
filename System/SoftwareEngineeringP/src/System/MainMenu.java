@@ -35,13 +35,13 @@ public class MainMenu extends javax.swing.JFrame {
         setSize(750, 550);
         AddPropertiesLayout = new javax.swing.GroupLayout(AddProperties);
         AddProperties.setLayout(AddPropertiesLayout);
-        Store1.setVisible(false);
-        Store2.setVisible(false);
-        Store3.setVisible(false);
-        Store4.setVisible(false);
-        Store5.setVisible(false);
+        CartStore1Button.setVisible(false);
+        CartStore2Button.setVisible(false);
+        CartStore3Button.setVisible(false);
+        CartStore4Button.setVisible(false);
+        CartStore5Button.setVisible(false);
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,7 +77,7 @@ public class MainMenu extends javax.swing.JFrame {
         SpaceText = new javax.swing.JTextField();
         RankText = new javax.swing.JTextField();
         PriceText = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ChooseStore1Button = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -89,7 +89,7 @@ public class MainMenu extends javax.swing.JFrame {
         SpaceText4 = new javax.swing.JTextField();
         RankText4 = new javax.swing.JTextField();
         PriceText4 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        ChooseStore5Button = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
@@ -101,7 +101,7 @@ public class MainMenu extends javax.swing.JFrame {
         SpaceText5 = new javax.swing.JTextField();
         RankText5 = new javax.swing.JTextField();
         PriceText5 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        ChooseStore2Button = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
@@ -113,7 +113,7 @@ public class MainMenu extends javax.swing.JFrame {
         SpaceText6 = new javax.swing.JTextField();
         RankText6 = new javax.swing.JTextField();
         PriceText6 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        ChooseStore3Button = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
@@ -125,7 +125,7 @@ public class MainMenu extends javax.swing.JFrame {
         SpaceText7 = new javax.swing.JTextField();
         RankText7 = new javax.swing.JTextField();
         PriceText7 = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
+        ChooseStore4Button = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         MainMenuOrderByLabel = new javax.swing.JLabel();
         MainMenuFilteringComboBox = new javax.swing.JComboBox<>();
@@ -134,11 +134,11 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuBookApptButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         AddProperties = new javax.swing.JPanel();
-        Store3 = new javax.swing.JButton();
-        Store1 = new javax.swing.JButton();
-        Store2 = new javax.swing.JButton();
-        Store4 = new javax.swing.JButton();
-        Store5 = new javax.swing.JButton();
+        CartStore3Button = new javax.swing.JButton();
+        CartStore1Button = new javax.swing.JButton();
+        CartStore2Button = new javax.swing.JButton();
+        CartStore4Button = new javax.swing.JButton();
+        CartStore5Button = new javax.swing.JButton();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -288,13 +288,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         PriceText.setEditable(false);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton1.setContentAreaFilled(false);
-        jButton1.setMaximumSize(new java.awt.Dimension(45, 22));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ChooseStore1Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
+        ChooseStore1Button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ChooseStore1Button.setContentAreaFilled(false);
+        ChooseStore1Button.setMaximumSize(new java.awt.Dimension(45, 22));
+        ChooseStore1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ChooseStore1ButtonActionPerformed(evt);
             }
         });
 
@@ -305,7 +305,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChooseStore1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
@@ -358,7 +358,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ChooseStore1Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -403,13 +403,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         PriceText4.setEditable(false);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2.setContentAreaFilled(false);
-        jButton2.setMaximumSize(new java.awt.Dimension(45, 22));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ChooseStore5Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
+        ChooseStore5Button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ChooseStore5Button.setContentAreaFilled(false);
+        ChooseStore5Button.setMaximumSize(new java.awt.Dimension(45, 22));
+        ChooseStore5Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ChooseStore5ButtonActionPerformed(evt);
             }
         });
 
@@ -420,7 +420,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChooseStore5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -474,7 +474,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel11)
                 .addGap(0, 12, Short.MAX_VALUE))
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ChooseStore5Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -519,13 +519,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         PriceText5.setEditable(false);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
-        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton3.setContentAreaFilled(false);
-        jButton3.setMaximumSize(new java.awt.Dimension(45, 22));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ChooseStore2Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
+        ChooseStore2Button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ChooseStore2Button.setContentAreaFilled(false);
+        ChooseStore2Button.setMaximumSize(new java.awt.Dimension(45, 22));
+        ChooseStore2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ChooseStore2ButtonActionPerformed(evt);
             }
         });
 
@@ -536,7 +536,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChooseStore2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
@@ -589,7 +589,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ChooseStore2Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
@@ -634,13 +634,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         PriceText6.setEditable(false);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
-        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton4.setContentAreaFilled(false);
-        jButton4.setMaximumSize(new java.awt.Dimension(45, 22));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ChooseStore3Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
+        ChooseStore3Button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ChooseStore3Button.setContentAreaFilled(false);
+        ChooseStore3Button.setMaximumSize(new java.awt.Dimension(45, 22));
+        ChooseStore3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ChooseStore3ButtonActionPerformed(evt);
             }
         });
 
@@ -651,7 +651,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChooseStore3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -705,7 +705,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ChooseStore3Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
@@ -750,13 +750,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         PriceText7.setEditable(false);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
-        jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton5.setContentAreaFilled(false);
-        jButton5.setMaximumSize(new java.awt.Dimension(45, 22));
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        ChooseStore4Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
+        ChooseStore4Button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ChooseStore4Button.setContentAreaFilled(false);
+        ChooseStore4Button.setMaximumSize(new java.awt.Dimension(45, 22));
+        ChooseStore4Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                ChooseStore4ButtonActionPerformed(evt);
             }
         });
 
@@ -767,7 +767,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ChooseStore4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -821,7 +821,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addContainerGap())
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(ChooseStore4Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout StorePanelLayout = new javax.swing.GroupLayout(StorePanel);
@@ -907,43 +907,43 @@ public class MainMenu extends javax.swing.JFrame {
 
         AddProperties.setBackground(new java.awt.Color(220, 220, 220));
 
-        Store3.setText("3");
-        Store3.setContentAreaFilled(false);
-        Store3.addActionListener(new java.awt.event.ActionListener() {
+        CartStore3Button.setText("3");
+        CartStore3Button.setContentAreaFilled(false);
+        CartStore3Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Store3ActionPerformed(evt);
+                CartStore3ButtonActionPerformed(evt);
             }
         });
 
-        Store1.setText("1");
-        Store1.setContentAreaFilled(false);
-        Store1.addActionListener(new java.awt.event.ActionListener() {
+        CartStore1Button.setText("1");
+        CartStore1Button.setContentAreaFilled(false);
+        CartStore1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Store1ActionPerformed(evt);
+                CartStore1ButtonActionPerformed(evt);
             }
         });
 
-        Store2.setText("2");
-        Store2.setContentAreaFilled(false);
-        Store2.addActionListener(new java.awt.event.ActionListener() {
+        CartStore2Button.setText("2");
+        CartStore2Button.setContentAreaFilled(false);
+        CartStore2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Store2ActionPerformed(evt);
+                CartStore2ButtonActionPerformed(evt);
             }
         });
 
-        Store4.setText("4");
-        Store4.setContentAreaFilled(false);
-        Store4.addActionListener(new java.awt.event.ActionListener() {
+        CartStore4Button.setText("4");
+        CartStore4Button.setContentAreaFilled(false);
+        CartStore4Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Store4ActionPerformed(evt);
+                CartStore4ButtonActionPerformed(evt);
             }
         });
 
-        Store5.setText("5");
-        Store5.setContentAreaFilled(false);
-        Store5.addActionListener(new java.awt.event.ActionListener() {
+        CartStore5Button.setText("5");
+        CartStore5Button.setContentAreaFilled(false);
+        CartStore5Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Store5ActionPerformed(evt);
+                CartStore5ButtonActionPerformed(evt);
             }
         });
 
@@ -954,26 +954,26 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddPropertiesLayout.createSequentialGroup()
                 .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Store5, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Store4, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Store3, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Store2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Store1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CartStore5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CartStore4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CartStore3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CartStore2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CartStore1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );
         AddPropertiesLayout.setVerticalGroup(
             AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AddPropertiesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(Store1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CartStore1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Store2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CartStore2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Store3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CartStore3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Store4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CartStore4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Store5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CartStore5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1068,11 +1068,11 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MainMenuFilteringComboBoxActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ChooseStore1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseStore1ButtonActionPerformed
         // TODO add your handling code here:
         Cart.add(L.Stores.get(0));
-        Store1.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        CartStore1Button.setVisible(true);
+    }//GEN-LAST:event_ChooseStore1ButtonActionPerformed
 
     private void RankTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankTextActionPerformed
         // TODO add your handling code here:
@@ -1098,11 +1098,11 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RankText4ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ChooseStore5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseStore5ButtonActionPerformed
         // TODO add your handling code here:
         Cart.add(L.Stores.get(4));
-        Store5.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        CartStore5Button.setVisible(true);
+    }//GEN-LAST:event_ChooseStore5ButtonActionPerformed
 
     private void LocationText5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText5ActionPerformed
         // TODO add your handling code here:
@@ -1116,11 +1116,11 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RankText5ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ChooseStore2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseStore2ButtonActionPerformed
         // TODO add your handling code here:
         Cart.add(L.Stores.get(1));
-        Store2.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        CartStore2Button.setVisible(true);
+    }//GEN-LAST:event_ChooseStore2ButtonActionPerformed
 
     private void LocationText6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText6ActionPerformed
         // TODO add your handling code here:
@@ -1134,11 +1134,11 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RankText6ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void ChooseStore3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseStore3ButtonActionPerformed
         // TODO add your handling code here:
         Cart.add(L.Stores.get(2));
-        Store3.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+        CartStore3Button.setVisible(true);
+    }//GEN-LAST:event_ChooseStore3ButtonActionPerformed
 
     private void LocationText7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText7ActionPerformed
         // TODO add your handling code here:
@@ -1152,11 +1152,11 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RankText7ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void ChooseStore4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChooseStore4ButtonActionPerformed
         // TODO add your handling code here:
         Cart.add(L.Stores.get(3));
-        Store4.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+        CartStore4Button.setVisible(true);
+    }//GEN-LAST:event_ChooseStore4ButtonActionPerformed
 
     private void MainMenuSignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuSignUpButtonActionPerformed
         // TODO add your handling code here:
@@ -1165,43 +1165,43 @@ public class MainMenu extends javax.swing.JFrame {
         SignPage.setVisible(true);
     }//GEN-LAST:event_MainMenuSignUpButtonActionPerformed
 
-    private void Store1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Store1ActionPerformed
+    private void CartStore1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartStore1ButtonActionPerformed
         // TODO add your handling code here:
         Cart.remove(L.Stores.get(0));
-        Store1.setVisible(false);
-    }//GEN-LAST:event_Store1ActionPerformed
+        CartStore1Button.setVisible(false);
+    }//GEN-LAST:event_CartStore1ButtonActionPerformed
 
-    private void Store3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Store3ActionPerformed
+    private void CartStore3ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartStore3ButtonActionPerformed
         // TODO add your handling code here:
         Cart.remove(L.Stores.get(2));
-        Store3.setVisible(false);
-    }//GEN-LAST:event_Store3ActionPerformed
+        CartStore3Button.setVisible(false);
+    }//GEN-LAST:event_CartStore3ButtonActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
-    private void Store4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Store4ActionPerformed
+    private void CartStore4ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartStore4ButtonActionPerformed
         // TODO add your handling code here:
         Cart.remove(L.Stores.get(3));
-        Store4.setVisible(false);
-    }//GEN-LAST:event_Store4ActionPerformed
+        CartStore4Button.setVisible(false);
+    }//GEN-LAST:event_CartStore4ButtonActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void Store5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Store5ActionPerformed
+    private void CartStore5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartStore5ButtonActionPerformed
         // TODO add your handling code here:
         Cart.remove(L.Stores.get(4));
-        Store5.setVisible(false);
-    }//GEN-LAST:event_Store5ActionPerformed
+        CartStore5Button.setVisible(false);
+    }//GEN-LAST:event_CartStore5ButtonActionPerformed
 
-    private void Store2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Store2ActionPerformed
+    private void CartStore2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CartStore2ButtonActionPerformed
         // TODO add your handling code here:
         Cart.remove(L.Stores.get(1));
-        Store2.setVisible(false);
-    }//GEN-LAST:event_Store2ActionPerformed
+        CartStore2Button.setVisible(false);
+    }//GEN-LAST:event_CartStore2ButtonActionPerformed
 
     
     public void populate(LeasingOffice LO){
@@ -1240,6 +1240,16 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddProperties;
+    private javax.swing.JButton CartStore1Button;
+    private javax.swing.JButton CartStore2Button;
+    private javax.swing.JButton CartStore3Button;
+    private javax.swing.JButton CartStore4Button;
+    private javax.swing.JButton CartStore5Button;
+    private javax.swing.JButton ChooseStore1Button;
+    private javax.swing.JButton ChooseStore2Button;
+    private javax.swing.JButton ChooseStore3Button;
+    private javax.swing.JButton ChooseStore4Button;
+    private javax.swing.JButton ChooseStore5Button;
     private javax.swing.JTextField LocationText;
     private javax.swing.JTextField LocationText4;
     private javax.swing.JTextField LocationText5;
@@ -1269,18 +1279,8 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JTextField SpaceText5;
     private javax.swing.JTextField SpaceText6;
     private javax.swing.JTextField SpaceText7;
-    private javax.swing.JButton Store1;
-    private javax.swing.JButton Store2;
-    private javax.swing.JButton Store3;
-    private javax.swing.JButton Store4;
-    private javax.swing.JButton Store5;
     private javax.swing.JPanel StorePanel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton9;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;

@@ -324,7 +324,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton1" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="ChooseStore1Button" min="-2" pref="179" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -394,7 +394,7 @@
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ChooseStore1Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -463,7 +463,7 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton1">
+                    <Component class="javax.swing.JButton" name="ChooseStore1Button">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/System/Most-Beautiful-House-in-the-World.jpg"/>
@@ -479,7 +479,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChooseStore1ButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -495,7 +495,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton2" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="ChooseStore5Button" min="-2" pref="179" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -566,7 +566,7 @@
                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ChooseStore5Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -635,7 +635,7 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton2">
+                    <Component class="javax.swing.JButton" name="ChooseStore5Button">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/System/Most-Beautiful-House-in-the-World.jpg"/>
@@ -651,7 +651,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChooseStore5ButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel11">
@@ -667,7 +667,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton3" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="ChooseStore2Button" min="-2" pref="179" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
@@ -737,7 +737,7 @@
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ChooseStore2Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -806,7 +806,7 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton3">
+                    <Component class="javax.swing.JButton" name="ChooseStore2Button">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/System/Most-Beautiful-House-in-the-World.jpg"/>
@@ -822,7 +822,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChooseStore2ButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel6">
@@ -838,7 +838,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton4" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="ChooseStore3Button" min="-2" pref="179" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -909,7 +909,7 @@
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jButton4" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ChooseStore3Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -978,7 +978,7 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton4">
+                    <Component class="javax.swing.JButton" name="ChooseStore3Button">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/System/Most-Beautiful-House-in-the-World.jpg"/>
@@ -994,7 +994,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChooseStore3ButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -1010,7 +1010,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jButton5" min="-2" pref="179" max="-2" attributes="0"/>
+                              <Component id="ChooseStore4Button" min="-2" pref="179" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1081,7 +1081,7 @@
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ChooseStore4Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
@@ -1150,7 +1150,7 @@
                         <Property name="editable" type="boolean" value="false"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="jButton5">
+                    <Component class="javax.swing.JButton" name="ChooseStore4Button">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/System/Most-Beautiful-House-in-the-World.jpg"/>
@@ -1166,7 +1166,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ChooseStore4ButtonActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel10">
@@ -1285,11 +1285,11 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="34" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="Store5" min="-2" pref="166" max="-2" attributes="0"/>
-                              <Component id="Store4" min="-2" pref="166" max="-2" attributes="0"/>
-                              <Component id="Store3" min="-2" pref="166" max="-2" attributes="0"/>
-                              <Component id="Store2" min="-2" pref="166" max="-2" attributes="0"/>
-                              <Component id="Store1" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="CartStore5Button" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="CartStore4Button" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="CartStore3Button" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="CartStore2Button" min="-2" pref="166" max="-2" attributes="0"/>
+                              <Component id="CartStore1Button" min="-2" pref="166" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
@@ -1299,64 +1299,64 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Store1" min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="CartStore1Button" min="-2" pref="65" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Store2" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="CartStore2Button" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Store3" min="-2" pref="64" max="-2" attributes="0"/>
+                          <Component id="CartStore3Button" min="-2" pref="64" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Store4" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="CartStore4Button" min="-2" pref="60" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="Store5" min="-2" pref="57" max="-2" attributes="0"/>
+                          <Component id="CartStore5Button" min="-2" pref="57" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="Store3">
+                <Component class="javax.swing.JButton" name="CartStore3Button">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="3"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Store3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CartStore3ButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Store1">
+                <Component class="javax.swing.JButton" name="CartStore1Button">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Store1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CartStore1ButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Store2">
+                <Component class="javax.swing.JButton" name="CartStore2Button">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="2"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Store2ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CartStore2ButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Store4">
+                <Component class="javax.swing.JButton" name="CartStore4Button">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="4"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Store4ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CartStore4ButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="Store5">
+                <Component class="javax.swing.JButton" name="CartStore5Button">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="5"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Store5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CartStore5ButtonActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
