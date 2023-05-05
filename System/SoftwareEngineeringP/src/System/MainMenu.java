@@ -33,7 +33,6 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
-        MainMenuFilteringComboBox = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         MainMenuLoginButton = new javax.swing.JButton();
         MainMenuSignUpButton = new javax.swing.JButton();
@@ -44,18 +43,12 @@ public class MainMenu extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         MainMenuOrderByLabel = new javax.swing.JLabel();
+        MainMenuFilteringComboBox = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         MainMenuSelectedPropertiesLabel = new javax.swing.JLabel();
         MainMenuBookApptButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
-
-        MainMenuFilteringComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price [Ascending]", "Price [Descending]", "Size [Ascending]", "Size [Descending]", "Grade [Ascending]", "Grade [Descending]" }));
-        MainMenuFilteringComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MainMenuFilteringComboBoxActionPerformed(evt);
-            }
-        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
@@ -134,6 +127,13 @@ public class MainMenu extends javax.swing.JFrame {
 
         MainMenuOrderByLabel.setText("Order By:");
 
+        MainMenuFilteringComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price [Ascending]", "Price [Descending]", "Size [Ascending]", "Size [Descending]", "Grade [Ascending]", "Grade [Descending]" }));
+        MainMenuFilteringComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainMenuFilteringComboBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -146,7 +146,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
                         .addComponent(MainMenuOrderByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MainMenuFilteringComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,7 +155,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MainMenuOrderByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MainMenuOrderByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MainMenuFilteringComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2)
                 .addContainerGap())
