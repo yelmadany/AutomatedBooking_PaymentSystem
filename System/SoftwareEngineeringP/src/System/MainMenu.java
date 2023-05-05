@@ -4,7 +4,9 @@
  */
 package System;
 
+import java.awt.Image;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
@@ -106,7 +108,7 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuSelectedPropertiesLabel = new javax.swing.JLabel();
         MainMenuBookApptButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel4 = new javax.swing.JPanel();
+        AddProperties = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Basha Mart");
@@ -761,20 +763,20 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(220, 220, 220));
+        AddProperties.setBackground(new java.awt.Color(220, 220, 220));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout AddPropertiesLayout = new javax.swing.GroupLayout(AddProperties);
+        AddProperties.setLayout(AddPropertiesLayout);
+        AddPropertiesLayout.setHorizontalGroup(
+            AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 224, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        AddPropertiesLayout.setVerticalGroup(
+            AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 602, Short.MAX_VALUE)
         );
 
-        jScrollPane1.setViewportView(jPanel4);
+        jScrollPane1.setViewportView(AddProperties);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -850,7 +852,16 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        ImageIcon icon = new ImageIcon("Most-Beautiful-House-in-the-World.jpg");
+        Image image = icon.getImage();
         
+        // Scale the image to fit within the panel
+        Image scaledImage = image.getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        
+        // Create a JLabel with the scaled image as its icon
+        JLabel label = new JLabel(new ImageIcon(scaledImage));
+        AddProperties.add(label);
+        System.out.print("ok");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void RankTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankTextActionPerformed
@@ -957,6 +968,7 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AddProperties;
     private javax.swing.JTextField LocationText;
     private javax.swing.JTextField LocationText4;
     private javax.swing.JTextField LocationText5;
@@ -1024,7 +1036,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
