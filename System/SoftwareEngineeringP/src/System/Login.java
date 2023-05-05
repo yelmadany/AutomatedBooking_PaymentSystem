@@ -14,13 +14,21 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    public Login() {
+    boolean User = false, Pass = false;
+    LeasingOffice L;
+    MainMenu MM; 
+    public Login(MainMenu M) {
+        MM =M;
         initComponents();
         this.setVisible(true);
         LoginLoginButton.setVisible(true);
         LoginSignUpButton.setVisible(true);
     }
-
+    void checkenable(){
+        if(User&&Pass){
+            LoginLoginButton.setEnabled(true);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,6 +55,7 @@ public class Login extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         LoginPasswordLabel = new javax.swing.JLabel();
         LoginInputPassword = new javax.swing.JPasswordField();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
         jPanel11 = new javax.swing.JPanel();
         LoginRememberMeCheckBox = new javax.swing.JCheckBox();
         LoginForgotPasswordLabel = new javax.swing.JLabel();
@@ -63,6 +72,8 @@ public class Login extends javax.swing.JFrame {
         jPanel17 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login ");
+        setLocation(new java.awt.Point(500, 200));
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 706, 516));
         setResizable(false);
         setSize(new java.awt.Dimension(500, 512));
@@ -166,6 +177,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel9.add(LoginInputPassword, java.awt.BorderLayout.CENTER);
+        jPanel9.add(filler1, java.awt.BorderLayout.PAGE_END);
 
         jPanel8.add(jPanel9, java.awt.BorderLayout.PAGE_END);
 
@@ -200,6 +212,8 @@ public class Login extends javax.swing.JFrame {
         LoginLoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginLoginButton.setText("LOGIN");
         LoginLoginButton.setActionCommand("Login");
+        LoginLoginButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(37, 150, 56), 1, true));
+        LoginLoginButton.setEnabled(false);
         LoginLoginButton.setPreferredSize(new java.awt.Dimension(300, 29));
         LoginLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +248,8 @@ public class Login extends javax.swing.JFrame {
 
         LoginSignUpButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         LoginSignUpButton.setText("SIGN UP");
+        LoginSignUpButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, java.awt.Color.black, java.awt.Color.black));
+        LoginSignUpButton.setContentAreaFilled(false);
         LoginSignUpButton.setPreferredSize(new java.awt.Dimension(300, 29));
         LoginSignUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -373,6 +389,9 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginInputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginInputUsernameActionPerformed
         // TODO add your handling code here:
+        User = true;
+        checkenable();
+        
     }//GEN-LAST:event_LoginInputUsernameActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -381,13 +400,15 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginLoginButtonActionPerformed
         // TODO add your handling code here:
-//        this.dispose();
-//        ArrayList<Store> yolo = new ArrayList();
-//        MainMenu MainMenuPage = new MainMenu();
+            this.dispose();
+            MM.setVisible(true);
+            MM.login();
     }//GEN-LAST:event_LoginLoginButtonActionPerformed
 
     private void LoginInputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginInputPasswordActionPerformed
         // TODO add your handling code here:
+        Pass =true;
+        checkenable();
     }//GEN-LAST:event_LoginInputPasswordActionPerformed
 
     private void LoginRememberMeCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginRememberMeCheckBoxActionPerformed
@@ -398,40 +419,6 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginSignUpButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LoginForgotPasswordLabel;
@@ -444,6 +431,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton LoginSignUpButton;
     private javax.swing.JLabel LoginUsernameLabel;
     private javax.swing.JLabel LoginWelcomeBack;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;

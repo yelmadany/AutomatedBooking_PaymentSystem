@@ -20,13 +20,10 @@ public class LeasingOffice {
      Agents = new ArrayList();
     }
     
-    public void MakeAppointment(){
-        ArrayList<Schedule> Temp = new ArrayList();
-        for(int i = 0; i< Agents.size();i++){
-            //Temp.add(Agents.get(i).GetAgentSchedule());
-        }
-        
+    public void MakeAppointment(){ 
         //Display Schedules
+            AgentSelect Agt = new AgentSelect(this);
+            Agt.setVisible(true);
     }
     
     public void SelectAppDetails(LeasingAgent Ag, String Dat, String Time){
@@ -106,6 +103,20 @@ public class LeasingOffice {
         Store store10 = new Store("Las Vegas", "2000 sqft", 4000.0, "Retail", "Cosmetics", 'A');
         Controller.Stores.add(store10);
         
+        LeasingAgent s1 = new LeasingAgent("Youssef Elmadany", "555-1234", "jsmith@email.com", 50000, "Residential", "001");
+        Controller.Agents.add(s1);
+
+        LeasingAgent s2 = new LeasingAgent("Abdullah Usmani", "555-5678", "jdoe@email.com", 60000, "Commercial", "002");
+        Controller.Agents.add(s2);
+
+        LeasingAgent s3 = new LeasingAgent("Ariel Panopio", "555-9876", "bjohnson@email.com", 55000, "Residential", "003");
+        Controller.Agents.add(s3);
+
+        LeasingAgent s4 = new LeasingAgent("Abdullah Zahid", "555-4321", "edavis@email.com", 65000, "Commercial", "004");
+        Controller.Agents.add(s4);
+
+        LeasingAgent s5 = new LeasingAgent("Muhammad Junaid", "555-2468", "twilson@email.com", 60000, "Residential", "005");
+        Controller.Agents.add(s5); 
         //Menu
         (new MainMenu(Controller)).setVisible(true);
     }

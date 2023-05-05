@@ -8,6 +8,7 @@ import java.awt.Image;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -16,13 +17,17 @@ import javax.swing.JPanel;
  */
 public class MainMenu extends javax.swing.JFrame {
 
+    LeasingOffice L;
+    ArrayList<Store> Cart;
     /**
      * Creates new form MainMenu
      * @param Stores
      */
     public MainMenu(LeasingOffice LO) {
+        L = LO;
+        Cart = new ArrayList<Store>();
         initComponents();
-        populate(LO);
+        populate(L);
         MainMenuPayRentButton.setVisible(false);
         MainMenuSignOutButton.setVisible(false);
         setSize(750, 550);
@@ -112,9 +117,9 @@ public class MainMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Basha Mart");
-        setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(0, 0, 0));
         setForeground(java.awt.Color.black);
-        setLocation(new java.awt.Point(50, 50));
+        setLocation(new java.awt.Point(500, 200));
         setResizable(false);
 
         MainMenuLoginButton.setBackground(new java.awt.Color(79, 220, 83));
@@ -132,6 +137,13 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuSignUpButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MainMenuSignUpButton.setText("SIGN UP");
         MainMenuSignUpButton.setActionCommand("Sign Up");
+        MainMenuSignUpButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        MainMenuSignUpButton.setContentAreaFilled(false);
+        MainMenuSignUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainMenuSignUpButtonActionPerformed(evt);
+            }
+        });
 
         MainMenuPayRentButton.setBackground(new java.awt.Color(0, 128, 236));
         MainMenuPayRentButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -145,6 +157,8 @@ public class MainMenu extends javax.swing.JFrame {
 
         MainMenuSignOutButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         MainMenuSignOutButton.setText("SIGN OUT");
+        MainMenuSignOutButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        MainMenuSignOutButton.setContentAreaFilled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -175,8 +189,10 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuAvailablePropertiesLabel.setAutoscrolls(true);
         MainMenuAvailablePropertiesLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        jScrollPane2.setBackground(new java.awt.Color(255, 255, 153));
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         StorePanel.setBackground(new java.awt.Color(220, 220, 220));
 
@@ -729,8 +745,8 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
+                        .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(MainMenuOrderByLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(MainMenuFilteringComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -750,7 +766,7 @@ public class MainMenu extends javax.swing.JFrame {
         );
 
         MainMenuSelectedPropertiesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        MainMenuSelectedPropertiesLabel.setText("Selected Properties");
+        MainMenuSelectedPropertiesLabel.setText("Selected Properties: Click to Remove");
 
         MainMenuBookApptButton.setBackground(new java.awt.Color(0, 128, 236));
         MainMenuBookApptButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -832,13 +848,30 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void MainMenuBookApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuBookApptButtonActionPerformed
         // TODO add your handling code here:
-        
+        if(Cart.size()  == 0){
+            //Error
+             javax.swing.JLabel label = new javax.swing.JLabel("Cart Empty.");
+             label.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 18));
+             JOptionPane.showMessageDialog(null, label, "ERROR", JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            //MainMenuSignOutButton.isVisible()
+            if(true){
+            L.MakeAppointment();
+            this.dispose();
+            }
+            else{
+             javax.swing.JLabel label = new javax.swing.JLabel("Login First.");
+             label.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 18));
+             JOptionPane.showMessageDialog(null, label, "ERROR", JOptionPane.INFORMATION_MESSAGE);
+            }
+        }
     }//GEN-LAST:event_MainMenuBookApptButtonActionPerformed
 
     private void MainMenuLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuLoginButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        Login loginPage = new Login();
+        this.setVisible(false);
+        Login loginPage = new Login(this);
         
     }//GEN-LAST:event_MainMenuLoginButtonActionPerformed
 
@@ -859,9 +892,9 @@ public class MainMenu extends javax.swing.JFrame {
         Image scaledImage = image.getScaledInstance(500, 500, Image.SCALE_SMOOTH);
         
         // Create a JLabel with the scaled image as its icon
-        JLabel label = new JLabel(new ImageIcon(scaledImage));
+        javax.swing.JLabel label = new JLabel(new ImageIcon(scaledImage));
         AddProperties.add(label);
-        System.out.print("ok");
+        Cart.add(L.Stores.get(0));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void RankTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RankTextActionPerformed
@@ -890,6 +923,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        Cart.add(L.Stores.get(4));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void LocationText5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText5ActionPerformed
@@ -906,6 +940,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        Cart.add(L.Stores.get(1));
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void LocationText6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText6ActionPerformed
@@ -922,6 +957,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        Cart.add(L.Stores.get(2));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void LocationText7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LocationText7ActionPerformed
@@ -938,7 +974,14 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        Cart.add(L.Stores.get(3));
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void MainMenuSignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuSignUpButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        SignUp SignPage = new SignUp(this);
+    }//GEN-LAST:event_MainMenuSignUpButtonActionPerformed
 
     public void populate(LeasingOffice LO){
             PriceText.setText(Double.toString(LO.Stores.get(0).Rental_rate));
@@ -965,6 +1008,11 @@ public class MainMenu extends javax.swing.JFrame {
             RankText7.setText(Character.toString(LO.Stores.get(4).Rank));
             SpaceText7.setText(LO.Stores.get(4).Space);
             LocationText7.setText(LO.Stores.get(4).Location);
+    }
+    
+    void login(){
+        MainMenuPayRentButton.setVisible(true);
+        MainMenuSignOutButton.setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

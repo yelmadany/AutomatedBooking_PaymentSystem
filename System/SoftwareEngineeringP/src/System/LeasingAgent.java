@@ -24,22 +24,25 @@ public class LeasingAgent {
     public LeasingAgent(String _name, String _PhoneNumb, String _Email, int _Sal, String _purp, String ID){
  
         name=_name;
-     PhoneNumb=_PhoneNumb; 
-     Email=_Email;
-     Salary=_Sal;
-    Purpose = _purp;
-     Agent_id= ID;
+        PhoneNumb=_PhoneNumb; 
+        Email=_Email;
+        Salary=_Sal;
+        Purpose = _purp;
+        Agent_id= ID;
+        sched = new Schedule();
 }
     //connect with Account, Appointment, and Leasing Office
     
     //implement functions:::
-    public String[][] GetAgentSchedule(){
-        return sched.schedule_timings;
+    public Schedule GetAgentSchedule(){
+        return sched;
     }
     
     public void AddAppointment(Appointment app){
         sched.AdjustSchedule(app);
     }
     
-    public void SendNotif(){}
+    public int SendNotif(){ 
+        return 0;
+    }
 }

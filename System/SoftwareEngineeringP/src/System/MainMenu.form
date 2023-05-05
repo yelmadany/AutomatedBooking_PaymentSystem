@@ -9,13 +9,13 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Basha Mart"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="cc" green="cc" red="cc" type="rgb"/>
+      <Color blue="0" green="0" red="0" type="rgb"/>
     </Property>
     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="0" green="0" id="black" palette="1" red="0" type="palette"/>
     </Property>
     <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
-      <Point value="[50, 50]"/>
+      <Point value="[500, 200]"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
@@ -129,7 +129,16 @@
             </Property>
             <Property name="text" type="java.lang.String" value="SIGN UP"/>
             <Property name="actionCommand" type="java.lang.String" value="Sign Up"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MainMenuSignUpButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="MainMenuPayRentButton">
           <Properties>
@@ -154,6 +163,12 @@
               <Font name="Segoe UI" size="12" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="SIGN OUT"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -167,8 +182,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="MainMenuAvailablePropertiesLabel" min="-2" pref="210" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="MainMenuAvailablePropertiesLabel" min="-2" pref="231" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="MainMenuOrderByLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="MainMenuFilteringComboBox" max="32767" attributes="0"/>
@@ -205,8 +220,14 @@
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
             <Property name="verticalScrollBarPolicy" type="int" value="22"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Default Cursor"/>
+            </Property>
           </Properties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
@@ -1031,7 +1052,7 @@
         <Component class="javax.swing.JLabel" name="MainMenuSelectedPropertiesLabel">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Selected Properties"/>
+            <Property name="text" type="java.lang.String" value="Selected Properties: Click to Remove"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="MainMenuBookApptButton">
