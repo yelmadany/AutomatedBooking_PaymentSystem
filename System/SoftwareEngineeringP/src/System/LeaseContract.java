@@ -12,6 +12,16 @@ import java.util.ArrayList;
  * @author Yo200
  */
 public class LeaseContract implements PaymentGateway {
+
+    @Override
+    public void Pay(int Number, String Date) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void Verify(int Number, String Date) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     enum frequency {monthly, tri_annual, bi_annual, yearly}
     
     frequency PaymentFrequency;
