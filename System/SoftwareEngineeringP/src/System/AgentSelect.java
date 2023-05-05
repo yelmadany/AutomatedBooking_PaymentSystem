@@ -4,8 +4,16 @@
  */
 package System;
 //import com.raven.datechooser.*;
+import java.text.Format;  
+import java.text.ParseException;
+import java.text.SimpleDateFormat;  
+import java.util.Date;  
+import java.util.Calendar;  
+
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -293,12 +301,24 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void ShowCalendarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowCalendarButtonActionPerformed
         CalendarDateChooser.showPopup();
+
         
+
         
     }//GEN-LAST:event_ShowCalendarButtonActionPerformed
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
         // TODO add your handling code here:
+        String dateTxt = DateTxtField.getText();
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");  
+
+        Format f = new SimpleDateFormat("EEEE");  
+        try {
+            System.out.println("Day Name: "+ f.format(sdf.parse(dateTxt)));
+        } catch (ParseException ex) {
+            Logger.getLogger(AgentSelect.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_CheckAvailabilityButtonActionPerformed
 
     private void ConfirmApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmApptButtonActionPerformed

@@ -20,7 +20,7 @@ public class Schedule {
 //   String[] timings={"8:00am to 9:00am" ,"9:00am to 10:00am", "10:00am to 11:00am", "11:00am to 12:00pm", "12:00pm to 1:00pm", "1:00pm to 2:00pm", "2:00pm to 3:00pm", "3:00pm to 4:00pm", "4:00pm to 5:00pm ", "5:00pm to 6:00pm", "6:00pm to 7:00pm"};
     public Schedule(){
     //ArrayList<String> schedule_timings = new ArrayList();
-   
+
     for (ArrayList<String>  arrayStr : schedule_timings){
         System.out.println("YOLO");
     }
