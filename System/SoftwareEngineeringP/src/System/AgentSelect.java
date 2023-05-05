@@ -45,6 +45,7 @@ public class AgentSelect extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        CalendarDateChooser = new com.raven.datechooser.DateChooser();
         jPanel2 = new javax.swing.JPanel();
         SelectAgentLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -64,6 +65,9 @@ public class AgentSelect extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         ConfirmApptButton = new javax.swing.JButton();
 
+        CalendarDateChooser.setForeground(new java.awt.Color(0, 128, 236));
+        CalendarDateChooser.setTextRefernce(DateTxtField);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 102, 0)));
@@ -77,21 +81,20 @@ public class AgentSelect extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+                .addContainerGap(106, Short.MAX_VALUE)
                 .addComponent(SelectAgentLabel)
                 .addGap(94, 94, 94))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SelectAgentLabel)
-                .addContainerGap())
+                .addGap(0, 1, Short.MAX_VALUE)
+                .addComponent(SelectAgentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_START);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(250, 250));
+        jPanel1.setPreferredSize(new java.awt.Dimension(200, 200));
 
         AgentLabel.setText("Agent:");
 
@@ -161,6 +164,17 @@ public class AgentSelect extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 43, Short.MAX_VALUE)
+        );
+
         CheckAvailabilityButton.setBackground(new java.awt.Color(0, 128, 236));
         CheckAvailabilityButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         CheckAvailabilityButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,23 +184,6 @@ public class AgentSelect extends javax.swing.JFrame {
                 CheckAvailabilityButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                .addContainerGap())
-        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -199,6 +196,10 @@ public class AgentSelect extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(106, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,15 +208,19 @@ public class AgentSelect extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CheckAvailabilityButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(80, 80, 80)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        jPanel6.setPreferredSize(new java.awt.Dimension(478, 240));
+        jPanel6.setPreferredSize(new java.awt.Dimension(478, 270));
         jPanel6.setLayout(new java.awt.BorderLayout());
+
+        jPanel7.setLayout(new java.awt.BorderLayout());
 
         jPanel8.setPreferredSize(new java.awt.Dimension(478, 30));
 
@@ -235,24 +240,10 @@ public class AgentSelect extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(AvailableTimeLabel)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(154, Short.MAX_VALUE))
-        );
+        jPanel7.add(jPanel8, java.awt.BorderLayout.CENTER);
 
         jPanel6.add(jPanel7, java.awt.BorderLayout.CENTER);
 
@@ -298,7 +289,7 @@ public class AgentSelect extends javax.swing.JFrame {
     }//GEN-LAST:event_DateTxtFieldActionPerformed
 
     private void ShowCalendarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowCalendarButtonActionPerformed
-      //  dateChooser1.showPopup();
+        CalendarDateChooser.showPopup();
     }//GEN-LAST:event_ShowCalendarButtonActionPerformed
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
@@ -323,6 +314,7 @@ public class AgentSelect extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> AgentComboBox;
     private javax.swing.JLabel AgentLabel;
     private javax.swing.JLabel AvailableTimeLabel;
+    private com.raven.datechooser.DateChooser CalendarDateChooser;
     private javax.swing.JButton CheckAvailabilityButton;
     private javax.swing.JButton ConfirmApptButton;
     private javax.swing.JLabel DateLabel;
