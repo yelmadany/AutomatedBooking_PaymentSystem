@@ -215,23 +215,28 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel4.setText("Price");
 
+        LocationText.setEditable(false);
         LocationText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LocationTextActionPerformed(evt);
             }
         });
 
+        SpaceText.setEditable(false);
         SpaceText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpaceTextActionPerformed(evt);
             }
         });
 
+        RankText.setEditable(false);
         RankText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RankTextActionPerformed(evt);
             }
         });
+
+        PriceText.setEditable(false);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -316,23 +321,28 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel20.setText("Price");
 
+        LocationText4.setEditable(false);
         LocationText4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LocationText4ActionPerformed(evt);
             }
         });
 
+        SpaceText4.setEditable(false);
         SpaceText4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpaceText4ActionPerformed(evt);
             }
         });
 
+        RankText4.setEditable(false);
         RankText4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RankText4ActionPerformed(evt);
             }
         });
+
+        PriceText4.setEditable(false);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -417,23 +427,28 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel24.setText("Price");
 
+        LocationText5.setEditable(false);
         LocationText5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LocationText5ActionPerformed(evt);
             }
         });
 
+        SpaceText5.setEditable(false);
         SpaceText5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpaceText5ActionPerformed(evt);
             }
         });
 
+        RankText5.setEditable(false);
         RankText5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RankText5ActionPerformed(evt);
             }
         });
+
+        PriceText5.setEditable(false);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -518,23 +533,28 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel28.setText("Price");
 
+        LocationText6.setEditable(false);
         LocationText6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LocationText6ActionPerformed(evt);
             }
         });
 
+        SpaceText6.setEditable(false);
         SpaceText6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpaceText6ActionPerformed(evt);
             }
         });
 
+        RankText6.setEditable(false);
         RankText6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RankText6ActionPerformed(evt);
             }
         });
+
+        PriceText6.setEditable(false);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -619,23 +639,28 @@ public class MainMenu extends javax.swing.JFrame {
 
         jLabel32.setText("Price");
 
+        LocationText7.setEditable(false);
         LocationText7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LocationText7ActionPerformed(evt);
             }
         });
 
+        SpaceText7.setEditable(false);
         SpaceText7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SpaceText7ActionPerformed(evt);
             }
         });
 
+        RankText7.setEditable(false);
         RankText7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RankText7ActionPerformed(evt);
             }
         });
+
+        PriceText7.setEditable(false);
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/System/Most-Beautiful-House-in-the-World.jpg"))); // NOI18N
         jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -981,6 +1006,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         SignUp SignPage = new SignUp(this);
+        SignPage.setVisible(true);
     }//GEN-LAST:event_MainMenuSignUpButtonActionPerformed
 
     public void populate(LeasingOffice LO){
@@ -1013,6 +1039,8 @@ public class MainMenu extends javax.swing.JFrame {
     void login(){
         MainMenuPayRentButton.setVisible(true);
         MainMenuSignOutButton.setVisible(true);
+        MainMenuLoginButton.setVisible(false);
+        MainMenuSignUpButton.setVisible(false);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
