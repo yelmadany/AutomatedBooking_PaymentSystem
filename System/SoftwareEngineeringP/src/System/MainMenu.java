@@ -19,8 +19,8 @@ public class MainMenu extends javax.swing.JFrame {
     public MainMenu(ArrayList<Store> Stores) {
         initComponents();
         populate(Stores);
-        RentButton.setVisible(false);
-        SignOutButton.setVisible(false);
+        MainMenuPayRentButton.setVisible(false);
+        MainMenuSignOutButton.setVisible(false);
     }
 
     /**
@@ -33,54 +33,60 @@ public class MainMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
+        MainMenuFilteringComboBox = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        RentButton = new javax.swing.JButton();
-        SignOutButton = new javax.swing.JButton();
+        MainMenuLoginButton = new javax.swing.JButton();
+        MainMenuSignUpButton = new javax.swing.JButton();
+        MainMenuPayRentButton = new javax.swing.JButton();
+        MainMenuSignOutButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        MainMenuAvailablePropertiesLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        MainMenuOrderByLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        MainMenuSelectedPropertiesLabel = new javax.swing.JLabel();
+        MainMenuBookApptButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel4 = new javax.swing.JPanel();
+
+        MainMenuFilteringComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price [Ascending]", "Price [Descending]", "Size [Ascending]", "Size [Descending]", "Grade [Ascending]", "Grade [Descending]" }));
+        MainMenuFilteringComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainMenuFilteringComboBoxActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
 
-        jButton2.setBackground(new java.awt.Color(79, 220, 83));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("LOGIN");
-        jButton2.setActionCommand("Login");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(37, 150, 56), 1, true));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        MainMenuLoginButton.setBackground(new java.awt.Color(79, 220, 83));
+        MainMenuLoginButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MainMenuLoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        MainMenuLoginButton.setText("LOGIN");
+        MainMenuLoginButton.setActionCommand("Login");
+        MainMenuLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                MainMenuLoginButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton3.setText("SIGN UP");
-        jButton3.setActionCommand("Sign Up");
+        MainMenuSignUpButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MainMenuSignUpButton.setText("SIGN UP");
+        MainMenuSignUpButton.setActionCommand("Sign Up");
 
-        RentButton.setBackground(new java.awt.Color(0, 128, 236));
-        RentButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        RentButton.setForeground(new java.awt.Color(255, 255, 255));
-        RentButton.setText("PAY RENT");
-        RentButton.addActionListener(new java.awt.event.ActionListener() {
+        MainMenuPayRentButton.setBackground(new java.awt.Color(0, 128, 236));
+        MainMenuPayRentButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MainMenuPayRentButton.setForeground(new java.awt.Color(255, 255, 255));
+        MainMenuPayRentButton.setText("PAY RENT");
+        MainMenuPayRentButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RentButtonActionPerformed(evt);
+                MainMenuPayRentButtonActionPerformed(evt);
             }
         });
 
-        SignOutButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        SignOutButton.setText("SIGN OUT");
+        MainMenuSignOutButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MainMenuSignOutButton.setText("SIGN OUT");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,27 +94,28 @@ public class MainMenu extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(RentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuPayRentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SignOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuSignOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuSignUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(RentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(SignOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(MainMenuLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuSignUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuPayRentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuSignOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Available Properties");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        MainMenuAvailablePropertiesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MainMenuAvailablePropertiesLabel.setText("Available Properties");
+        MainMenuAvailablePropertiesLabel.setAutoscrolls(true);
+        MainMenuAvailablePropertiesLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jPanel5.setBackground(new java.awt.Color(220, 220, 220));
 
@@ -125,14 +132,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jPanel5);
 
-        jLabel3.setText("Order By:");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Price [Ascending]", "Price [Descending]", "Size [Ascending]", "Size [Descending]", "Grade [Ascending]", "Grade [Descending]" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
+        MainMenuOrderByLabel.setText("Order By:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -143,36 +143,34 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(MainMenuOrderByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(MainMenuAvailablePropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MainMenuOrderByLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2)
                 .addContainerGap())
         );
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Selected Properties");
+        MainMenuSelectedPropertiesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MainMenuSelectedPropertiesLabel.setText("Selected Properties");
 
-        jButton1.setBackground(new java.awt.Color(0, 128, 236));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("BOOK APPOINTMENT");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        MainMenuBookApptButton.setBackground(new java.awt.Color(0, 128, 236));
+        MainMenuBookApptButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MainMenuBookApptButton.setForeground(new java.awt.Color(255, 255, 255));
+        MainMenuBookApptButton.setText("BOOK APPOINTMENT");
+        MainMenuBookApptButton.setBorder(null);
+        MainMenuBookApptButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                MainMenuBookApptButtonActionPerformed(evt);
             }
         });
 
@@ -198,8 +196,8 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MainMenuSelectedPropertiesLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MainMenuBookApptButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap())
         );
@@ -207,11 +205,11 @@ public class MainMenu extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuSelectedPropertiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(MainMenuBookApptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -242,21 +240,25 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void MainMenuBookApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuBookApptButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_MainMenuBookApptButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void MainMenuLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuLoginButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        this.dispose();
+        Login loginPage = new Login();
+        
+    }//GEN-LAST:event_MainMenuLoginButtonActionPerformed
 
-    private void RentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RentButtonActionPerformed
+    private void MainMenuPayRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuPayRentButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RentButtonActionPerformed
+    }//GEN-LAST:event_MainMenuPayRentButtonActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void MainMenuFilteringComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuFilteringComboBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_MainMenuFilteringComboBoxActionPerformed
 
     public void populate(ArrayList<Store> Stores){
         javax.swing.JPanel StorePanel;
@@ -264,16 +266,16 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton RentButton;
-    private javax.swing.JButton SignOutButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel MainMenuAvailablePropertiesLabel;
+    private javax.swing.JButton MainMenuBookApptButton;
+    private javax.swing.JComboBox<String> MainMenuFilteringComboBox;
+    private javax.swing.JButton MainMenuLoginButton;
+    private javax.swing.JLabel MainMenuOrderByLabel;
+    private javax.swing.JButton MainMenuPayRentButton;
+    private javax.swing.JLabel MainMenuSelectedPropertiesLabel;
+    private javax.swing.JButton MainMenuSignOutButton;
+    private javax.swing.JButton MainMenuSignUpButton;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

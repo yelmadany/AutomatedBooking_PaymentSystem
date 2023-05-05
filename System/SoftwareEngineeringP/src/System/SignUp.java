@@ -10,12 +10,12 @@ package System;
  *
  * @author Yo200
  */
-public class SignUpNew extends javax.swing.JFrame {
+public class SignUp extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
      */
-    public SignUpNew() {
+    public SignUp() {
         initComponents();
     }
 
@@ -30,45 +30,45 @@ public class SignUpNew extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        SignUpSignUpLabel = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jPanel19 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        SignUpInputUsername = new javax.swing.JTextField();
+        SignUpUsernameLabel = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jTextField4 = new javax.swing.JTextField();
         jPanel18 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        SignUpPasswordLabel = new javax.swing.JLabel();
+        SignUpInputPassword = new javax.swing.JPasswordField();
         jPanel8 = new javax.swing.JPanel();
         jTextField3 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        SignUpConfirmPasswordLabel = new javax.swing.JLabel();
+        SignUpInputConfirmPassword = new javax.swing.JPasswordField();
         jPanel20 = new javax.swing.JPanel();
         jTextField6 = new javax.swing.JTextField();
         jPanel21 = new javax.swing.JPanel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        SignUpInputName = new javax.swing.JTextField();
+        SignUpNameLabel = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jTextField8 = new javax.swing.JTextField();
         jPanel23 = new javax.swing.JPanel();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        SignUpInputPhoneNum = new javax.swing.JTextField();
+        SignUpPhoneNumLabel = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jTextField10 = new javax.swing.JTextField();
         jPanel25 = new javax.swing.JPanel();
-        jTextField11 = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        SignUpInputEmail = new javax.swing.JTextField();
+        SignUpEmailLabel = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        SignUpCreateAccountButton = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        SignUpAccountExistsLabel = new javax.swing.JLabel();
+        SignUpLoginButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
@@ -87,8 +87,8 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
         jPanel3.setPreferredSize(new java.awt.Dimension(400, 35));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("Sign Up");
+        SignUpSignUpLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        SignUpSignUpLabel.setText("Sign Up");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -96,14 +96,14 @@ public class SignUpNew extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(168, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(SignUpSignUpLabel)
                 .addGap(164, 164, 164))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(SignUpSignUpLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -128,15 +128,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel19.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel19.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                SignUpInputUsernameActionPerformed(evt);
             }
         });
-        jPanel19.add(jTextField5, java.awt.BorderLayout.CENTER);
+        jPanel19.add(SignUpInputUsername, java.awt.BorderLayout.CENTER);
 
-        jLabel8.setText("Username");
-        jPanel19.add(jLabel8, java.awt.BorderLayout.PAGE_START);
+        SignUpUsernameLabel.setText("Username");
+        jPanel19.add(SignUpUsernameLabel, java.awt.BorderLayout.PAGE_START);
 
         jPanel5.add(jPanel19, java.awt.BorderLayout.PAGE_END);
 
@@ -155,15 +155,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel18.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel18.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jLabel6.setText("Password");
-        jPanel18.add(jLabel6, java.awt.BorderLayout.PAGE_START);
+        SignUpPasswordLabel.setText("Password");
+        jPanel18.add(SignUpPasswordLabel, java.awt.BorderLayout.PAGE_START);
 
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+                SignUpInputPasswordActionPerformed(evt);
             }
         });
-        jPanel18.add(jPasswordField2, java.awt.BorderLayout.CENTER);
+        jPanel18.add(SignUpInputPassword, java.awt.BorderLayout.CENTER);
 
         jPanel11.add(jPanel18, java.awt.BorderLayout.PAGE_END);
 
@@ -182,15 +182,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel9.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel9.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jLabel5.setText("Confirm Password");
-        jPanel9.add(jLabel5, java.awt.BorderLayout.PAGE_START);
+        SignUpConfirmPasswordLabel.setText("Confirm Password");
+        jPanel9.add(SignUpConfirmPasswordLabel, java.awt.BorderLayout.PAGE_START);
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputConfirmPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                SignUpInputConfirmPasswordActionPerformed(evt);
             }
         });
-        jPanel9.add(jPasswordField1, java.awt.BorderLayout.CENTER);
+        jPanel9.add(SignUpInputConfirmPassword, java.awt.BorderLayout.CENTER);
 
         jPanel8.add(jPanel9, java.awt.BorderLayout.PAGE_END);
 
@@ -209,15 +209,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel21.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel21.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                SignUpInputNameActionPerformed(evt);
             }
         });
-        jPanel21.add(jTextField7, java.awt.BorderLayout.CENTER);
+        jPanel21.add(SignUpInputName, java.awt.BorderLayout.CENTER);
 
-        jLabel9.setText("Name");
-        jPanel21.add(jLabel9, java.awt.BorderLayout.PAGE_START);
+        SignUpNameLabel.setText("Name");
+        jPanel21.add(SignUpNameLabel, java.awt.BorderLayout.PAGE_START);
 
         jPanel20.add(jPanel21, java.awt.BorderLayout.PAGE_END);
 
@@ -236,15 +236,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel23.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel23.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputPhoneNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                SignUpInputPhoneNumActionPerformed(evt);
             }
         });
-        jPanel23.add(jTextField9, java.awt.BorderLayout.CENTER);
+        jPanel23.add(SignUpInputPhoneNum, java.awt.BorderLayout.CENTER);
 
-        jLabel10.setText("Phone Number");
-        jPanel23.add(jLabel10, java.awt.BorderLayout.PAGE_START);
+        SignUpPhoneNumLabel.setText("Phone Number");
+        jPanel23.add(SignUpPhoneNumLabel, java.awt.BorderLayout.PAGE_START);
 
         jPanel22.add(jPanel23, java.awt.BorderLayout.PAGE_END);
 
@@ -263,15 +263,15 @@ public class SignUpNew extends javax.swing.JFrame {
         jPanel25.setPreferredSize(new java.awt.Dimension(300, 50));
         jPanel25.setLayout(new java.awt.BorderLayout(5, 5));
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        SignUpInputEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                SignUpInputEmailActionPerformed(evt);
             }
         });
-        jPanel25.add(jTextField11, java.awt.BorderLayout.CENTER);
+        jPanel25.add(SignUpInputEmail, java.awt.BorderLayout.CENTER);
 
-        jLabel11.setText("E-mail Address");
-        jPanel25.add(jLabel11, java.awt.BorderLayout.PAGE_START);
+        SignUpEmailLabel.setText("E-mail Address");
+        jPanel25.add(SignUpEmailLabel, java.awt.BorderLayout.PAGE_START);
 
         jPanel24.add(jPanel25, java.awt.BorderLayout.PAGE_END);
 
@@ -285,15 +285,15 @@ public class SignUpNew extends javax.swing.JFrame {
 
         jPanel12.setPreferredSize(new java.awt.Dimension(400, 50));
 
-        jButton2.setBackground(new java.awt.Color(79, 220, 83));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("CREATE ACCOUNT");
-        jButton2.setActionCommand("Login");
-        jButton2.setPreferredSize(new java.awt.Dimension(300, 29));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        SignUpCreateAccountButton.setBackground(new java.awt.Color(79, 220, 83));
+        SignUpCreateAccountButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SignUpCreateAccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        SignUpCreateAccountButton.setText("CREATE ACCOUNT");
+        SignUpCreateAccountButton.setActionCommand("Login");
+        SignUpCreateAccountButton.setPreferredSize(new java.awt.Dimension(300, 29));
+        SignUpCreateAccountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SignUpCreateAccountButtonActionPerformed(evt);
             }
         });
 
@@ -303,14 +303,14 @@ public class SignUpNew extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUpCreateAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUpCreateAccountButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -318,16 +318,16 @@ public class SignUpNew extends javax.swing.JFrame {
 
         jPanel13.setPreferredSize(new java.awt.Dimension(400, 75));
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Already have an account?");
-        jLabel4.setPreferredSize(new java.awt.Dimension(300, 16));
+        SignUpAccountExistsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        SignUpAccountExistsLabel.setText("Already have an account?");
+        SignUpAccountExistsLabel.setPreferredSize(new java.awt.Dimension(300, 16));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setText("LOGIN");
-        jButton1.setPreferredSize(new java.awt.Dimension(300, 29));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SignUpLoginButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        SignUpLoginButton.setText("LOGIN");
+        SignUpLoginButton.setPreferredSize(new java.awt.Dimension(300, 29));
+        SignUpLoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SignUpLoginButtonActionPerformed(evt);
             }
         });
 
@@ -338,17 +338,17 @@ public class SignUpNew extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addContainerGap(52, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(SignUpAccountExistsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SignUpLoginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(48, 48, 48))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUpAccountExistsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUpLoginButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -423,8 +423,6 @@ public class SignUpNew extends javax.swing.JFrame {
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\abdto\\Downloads\\image.png")); // NOI18N
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -473,53 +471,53 @@ public class SignUpNew extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void SignUpCreateAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpCreateAccountButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_SignUpCreateAccountButtonActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void SignUpInputConfirmPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputConfirmPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_SignUpInputConfirmPasswordActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SignUpLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpLoginButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SignUpLoginButtonActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void SignUpInputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_SignUpInputPasswordActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void SignUpInputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_SignUpInputUsernameActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void SignUpInputNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_SignUpInputNameActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void SignUpInputPhoneNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputPhoneNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_SignUpInputPhoneNumActionPerformed
 
     private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField10ActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void SignUpInputEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_SignUpInputEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -557,17 +555,23 @@ public class SignUpNew extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel SignUpAccountExistsLabel;
+    private javax.swing.JLabel SignUpConfirmPasswordLabel;
+    private javax.swing.JButton SignUpCreateAccountButton;
+    private javax.swing.JLabel SignUpEmailLabel;
+    private javax.swing.JPasswordField SignUpInputConfirmPassword;
+    private javax.swing.JTextField SignUpInputEmail;
+    private javax.swing.JTextField SignUpInputName;
+    private javax.swing.JPasswordField SignUpInputPassword;
+    private javax.swing.JTextField SignUpInputPhoneNum;
+    private javax.swing.JTextField SignUpInputUsername;
+    private javax.swing.JButton SignUpLoginButton;
+    private javax.swing.JLabel SignUpNameLabel;
+    private javax.swing.JLabel SignUpPasswordLabel;
+    private javax.swing.JLabel SignUpPhoneNumLabel;
+    private javax.swing.JLabel SignUpSignUpLabel;
+    private javax.swing.JLabel SignUpUsernameLabel;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -592,17 +596,11 @@ public class SignUpNew extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
