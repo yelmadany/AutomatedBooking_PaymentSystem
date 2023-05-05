@@ -417,6 +417,8 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginSignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginSignUpButtonActionPerformed
         // TODO add your handling code here:
+        this.dispose();
+        (new SignUp(MM)).setVisible(true);
     }//GEN-LAST:event_LoginSignUpButtonActionPerformed
 
 

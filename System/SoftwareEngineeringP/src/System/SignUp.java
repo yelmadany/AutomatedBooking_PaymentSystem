@@ -485,6 +485,9 @@ public class SignUp extends javax.swing.JFrame {
 
     private void SignUpLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpLoginButtonActionPerformed
         // TODO add your handling code here:
+        
+        this.dispose();
+        (new Login(MM)).setVisible(true);
     }//GEN-LAST:event_SignUpLoginButtonActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
