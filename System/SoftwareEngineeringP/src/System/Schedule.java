@@ -24,44 +24,7 @@ public class Schedule {
     for (ArrayList<String>  arrayStr : schedule_timings){
         System.out.println("YOLO");
     }
-     for(int i = 0; i < 7; i++)  {
-         schedule_timings[i][0]=days[i];
-         for(int j = 0; j < 10; j++)  {
-         schedule_timings[i][j+1]=timings[j];
-     }
-     }
      
-      for(int i = 0; i < 7; i++)  {
-         for(int j = 0; j < 10; j++)  {
-         isBooked[i][j+1]=false;
-     }
-     }
-   
-    }
-
-   
-    public String[][] Get_Sched(){
-        return schedule_timings;
-    }
-    
-    public void AdjustSchedule(Appointment app){
-        
-        int x=-1;
-        int y=-1;
-         for(int i = 0; i < 7; i++)  {
-             if(app.Day.equals( days[i])){
-                 x=i;
-                    for(int j = 0; j < 10; j++)  {
-                        if(app.time.equals( timings[j])){
-                            y=j+1;
-                        }
-                        }
-                    }
-           }
-         
-         if(x!=-1){
-         isBooked[x][y]=true;
-     }      
         
     } 
     
