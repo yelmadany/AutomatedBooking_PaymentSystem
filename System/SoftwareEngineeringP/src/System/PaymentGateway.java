@@ -9,5 +9,6 @@ package System;
  * @author Yo200
  */
 public interface PaymentGateway {
-    
+     void Pay(int Number, String Date);
+     void Verify(int Number, String Date);
 }
