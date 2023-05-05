@@ -18,6 +18,7 @@ public class SignUp extends javax.swing.JFrame {
     MainMenu MM;
     public SignUp(MainMenu M) {
         MM = M;
+        
         initComponents();
     }
 
@@ -476,7 +477,9 @@ public class SignUp extends javax.swing.JFrame {
     private void SignUpCreateAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpCreateAccountButtonActionPerformed
         // TODO add your handling code here:
         //AccountMade
+        this.dispose();
         MM.setVisible(true);
+        
     }//GEN-LAST:event_SignUpCreateAccountButtonActionPerformed
 
     private void SignUpInputConfirmPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpInputConfirmPasswordActionPerformed
