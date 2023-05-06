@@ -10,8 +10,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;  
 import java.util.Calendar;  
 import java.time.DayOfWeek;
+import javax.swing.AbstractButton;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
+
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,6 +54,18 @@ public class AgentSelect extends javax.swing.JFrame {
              //Sched = L.Agents.get(i).GetAgentSchedule();
              AgentComboBox.addItem(L.Agents.get(i).name); //populate the names
              ///populateAgent(Sched);
+        }
+    }
+    
+    private void displaySched(LeasingAgent Ag) {
+        Enumeration elements = GroupOfTimingsButtonGroup.getElements();
+        
+        while (elements.hasMoreElements()) {
+            AbstractButton button = (AbstractButton)elements.nextElement();
+            Ag.GetAgentSchedule().get_Sched();
+            
+            button.setEnabled(false);
+//            System.out.println(button.getText());
         }
     }
     
@@ -416,7 +432,15 @@ public class AgentSelect extends javax.swing.JFrame {
         // each agent has a schedule
         // display schedule based on agent name
         // 
-        
+        String agent_name = AgentComboBox.getSelectedItem().toString();
+//                displaySched();
+
+        for (LeasingAgent ag : L.Agents)
+            if (ag.name.equals(agent_name)){
+                displaySched(ag);
+                break;
+            }
+                
         // ArrayList<ArrayList<Boolean>> schedules = Schedule.schedule_timings;
     }//GEN-LAST:event_CheckAvailabilityButtonActionPerformed
 

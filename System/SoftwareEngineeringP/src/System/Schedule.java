@@ -26,21 +26,18 @@ public class Schedule {
 
         Random r = new Random();
         r.setSeed(999321);
-        // DayOfWeek day = DayOfWeek.of(r.nextInt(7));
         
         // initialize schedule timings for each day for each agent
         
-        for (int i = 0; i < 7; ++i) {
-           ArrayList<Boolean> arrayBool = new ArrayList<>(10);
-
-           for (int j = 0; j < 10; ++i){
-
-                arrayBool.add(r.nextBoolean());
-            }
-
-            schedule_timings.add(arrayBool);
-
-        }      
+//        for (int i = 0; i < 7; ++i) {
+//           ArrayList<Boolean> arrayBool = new ArrayList<>(10);
+//           
+//           for (int j = 0; j < 10; ++i){
+//                arrayBool.add(r.nextBoolean());
+//            }
+//           
+//            schedule_timings.add(arrayBool);
+//        }      
     } 
     
     public  ArrayList<ArrayList<Boolean>> get_Sched(){
@@ -66,7 +63,6 @@ public class Schedule {
              }
          }
      } 
-
     //implement and connect schedule
     
 }
