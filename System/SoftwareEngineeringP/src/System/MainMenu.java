@@ -210,6 +210,11 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuSignOutButton.setText("SIGN OUT");
         MainMenuSignOutButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         MainMenuSignOutButton.setContentAreaFilled(false);
+        MainMenuSignOutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MainMenuSignOutButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1203,6 +1208,15 @@ public class MainMenu extends javax.swing.JFrame {
         Cart.remove(L.Stores.get(1));
         CartStore2Button.setVisible(false);
     }//GEN-LAST:event_CartStore2ButtonActionPerformed
+
+    private void MainMenuSignOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuSignOutButtonActionPerformed
+        // TODO add your handling code here:
+        MainMenuPayRentButton.setVisible(false);
+        MainMenuSignOutButton.setVisible(false);
+        MainMenuLoginButton.setVisible(true);
+        MainMenuSignUpButton.setVisible(true);
+        
+    }//GEN-LAST:event_MainMenuSignOutButtonActionPerformed
 
     
     public void populate(LeasingOffice LO){

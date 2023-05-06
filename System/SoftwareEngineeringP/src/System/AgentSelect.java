@@ -32,6 +32,18 @@ public class AgentSelect extends javax.swing.JFrame {
         L = LO;
         initComponents();
         dpopulate();
+        GroupOfTimingsButtonGroup.add(j0800_0900RadioButton);
+        GroupOfTimingsButtonGroup.add(j0900_1000RadioButton);        
+        GroupOfTimingsButtonGroup.add(j1000_1100RadioButton);
+        GroupOfTimingsButtonGroup.add(j1100_1200RadioButton);
+        GroupOfTimingsButtonGroup.add(j1200_1300RadioButton);
+        GroupOfTimingsButtonGroup.add(j1300_1400RadioButton);
+        GroupOfTimingsButtonGroup.add(j1400_1500RadioButton);
+        GroupOfTimingsButtonGroup.add(j1500_1600RadioButton);
+        GroupOfTimingsButtonGroup.add(j1600_1700RadioButton);
+        GroupOfTimingsButtonGroup.add(j1700_1800RadioButton);
+        
+        
     }
     private void dpopulate(){
         for(int i = 0; i< L.Agents.size();i++){
@@ -54,6 +66,7 @@ public class AgentSelect extends javax.swing.JFrame {
     private void initComponents() {
 
         CalendarDateChooser = new com.raven.datechooser.DateChooser();
+        GroupOfTimingsButtonGroup = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         SelectAgentLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -70,6 +83,16 @@ public class AgentSelect extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         AvailableTimeLabel = new javax.swing.JLabel();
+        j0800_0900RadioButton = new javax.swing.JRadioButton();
+        j0900_1000RadioButton = new javax.swing.JRadioButton();
+        j1000_1100RadioButton = new javax.swing.JRadioButton();
+        j1100_1200RadioButton = new javax.swing.JRadioButton();
+        j1200_1300RadioButton = new javax.swing.JRadioButton();
+        j1400_1500RadioButton = new javax.swing.JRadioButton();
+        j1300_1400RadioButton = new javax.swing.JRadioButton();
+        j1500_1600RadioButton = new javax.swing.JRadioButton();
+        j1600_1700RadioButton = new javax.swing.JRadioButton();
+        j1700_1800RadioButton = new javax.swing.JRadioButton();
         jPanel9 = new javax.swing.JPanel();
         ConfirmApptButton = new javax.swing.JButton();
 
@@ -237,21 +260,87 @@ public class AgentSelect extends javax.swing.JFrame {
 
         AvailableTimeLabel.setText("Available Times: [Select 1]");
 
+        j0800_0900RadioButton.setText("0800 - 0900");
+
+        j0900_1000RadioButton.setText("0900 - 1000");
+        j0900_1000RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j0900_1000RadioButtonActionPerformed(evt);
+            }
+        });
+
+        j1000_1100RadioButton.setText("1000 - 1100");
+        j1000_1100RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1000_1100RadioButtonActionPerformed(evt);
+            }
+        });
+
+        j1100_1200RadioButton.setText("1100 - 1200");
+
+        j1200_1300RadioButton.setText("1200 - 1300");
+
+        j1400_1500RadioButton.setText("1400 - 1500");
+
+        j1300_1400RadioButton.setText("1300 - 1400");
+
+        j1500_1600RadioButton.setText("1500 - 1600");
+
+        j1600_1700RadioButton.setText("1600 - 1700");
+
+        j1700_1800RadioButton.setText("1700 - 1800");
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(64, 64, 64)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j1200_1300RadioButton)
+                    .addComponent(j1000_1100RadioButton)
+                    .addComponent(j1100_1200RadioButton)
+                    .addComponent(j0800_0900RadioButton, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(j0900_1000RadioButton, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(j1400_1500RadioButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j1300_1400RadioButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j1500_1600RadioButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j1600_1700RadioButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j1700_1800RadioButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(55, 55, 55))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(168, 168, 168)
                 .addComponent(AvailableTimeLabel)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(AvailableTimeLabel)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j0800_0900RadioButton)
+                    .addComponent(j1300_1400RadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j0900_1000RadioButton)
+                    .addComponent(j1400_1500RadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j1000_1100RadioButton)
+                    .addComponent(j1500_1600RadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j1100_1200RadioButton)
+                    .addComponent(j1600_1700RadioButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(j1200_1300RadioButton)
+                    .addComponent(j1700_1800RadioButton))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         jPanel7.add(jPanel8, java.awt.BorderLayout.CENTER);
@@ -329,6 +418,14 @@ public class AgentSelect extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AgentComboBoxActionPerformed
 
+    private void j0900_1000RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j0900_1000RadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_j0900_1000RadioButtonActionPerformed
+
+    private void j1000_1100RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1000_1100RadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_j1000_1100RadioButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -344,8 +441,19 @@ public class AgentSelect extends javax.swing.JFrame {
     private javax.swing.JButton ConfirmApptButton;
     private javax.swing.JLabel DateLabel;
     private javax.swing.JTextField DateTxtField;
+    private javax.swing.ButtonGroup GroupOfTimingsButtonGroup;
     private javax.swing.JLabel SelectAgentLabel;
     private javax.swing.JButton ShowCalendarButton;
+    private javax.swing.JRadioButton j0800_0900RadioButton;
+    private javax.swing.JRadioButton j0900_1000RadioButton;
+    private javax.swing.JRadioButton j1000_1100RadioButton;
+    private javax.swing.JRadioButton j1100_1200RadioButton;
+    private javax.swing.JRadioButton j1200_1300RadioButton;
+    private javax.swing.JRadioButton j1300_1400RadioButton;
+    private javax.swing.JRadioButton j1400_1500RadioButton;
+    private javax.swing.JRadioButton j1500_1600RadioButton;
+    private javax.swing.JRadioButton j1600_1700RadioButton;
+    private javax.swing.JRadioButton j1700_1800RadioButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

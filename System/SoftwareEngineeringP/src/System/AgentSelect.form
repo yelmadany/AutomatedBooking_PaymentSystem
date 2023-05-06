@@ -12,6 +12,8 @@
         </Property>
       </Properties>
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="GroupOfTimingsButtonGroup">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -308,10 +310,29 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="j1200_1300RadioButton" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1000_1100RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1100_1200RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j0800_0900RadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="j0900_1000RadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="j1400_1500RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1300_1400RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1500_1600RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1600_1700RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1700_1800RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
                           <Component id="AvailableTimeLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="177" max="32767" attributes="0"/>
+                          <EmptySpace pref="175" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -320,7 +341,32 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="AvailableTimeLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="198" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="j0800_0900RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1300_1400RadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="j0900_1000RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1400_1500RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="j1000_1100RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1500_1600RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="j1100_1200RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1600_1700RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="j1200_1300RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="j1700_1800RadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="56" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -329,6 +375,62 @@
                 <Component class="javax.swing.JLabel" name="AvailableTimeLabel">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Available Times: [Select 1]"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j0800_0900RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0800 - 0900"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j0900_1000RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0900 - 1000"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j0900_1000RadioButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1000_1100RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1000 - 1100"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1000_1100RadioButtonActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1100_1200RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1100 - 1200"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1200_1300RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1200 - 1300"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1400_1500RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1400 - 1500"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1300_1400RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1300 - 1400"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1500_1600RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1500 - 1600"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1600_1700RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1600 - 1700"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="j1700_1800RadioButton">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1700 - 1800"/>
                   </Properties>
                 </Component>
               </SubComponents>
