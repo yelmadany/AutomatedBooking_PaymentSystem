@@ -403,7 +403,10 @@ public class AgentSelect extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");  
 
         Format f = new SimpleDateFormat("EEEE");  
+        
         try {
+            String dayName = f.format(sdf.parse(dateTxt));
+            
             System.out.println("Day Name: "+ f.format(sdf.parse(dateTxt)));
         } catch (ParseException ex) {
             Logger.getLogger(AgentSelect.class.getName()).log(Level.SEVERE, null, ex);

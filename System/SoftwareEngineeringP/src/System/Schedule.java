@@ -22,7 +22,8 @@ public class Schedule {
     //ArrayList<String> schedule_timings = new ArrayList();
 
     for (ArrayList<String>  arrayStr : schedule_timings){
-        System.out.println("YOLO");
+        arrayStr.add("YOLO");
+        System.out.println(arrayStr);
     }
      
         

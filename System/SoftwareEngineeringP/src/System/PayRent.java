@@ -26,21 +26,241 @@ public class PayRent extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        HeaderPanel = new javax.swing.JPanel();
+        BillSummaryLabel = new javax.swing.JLabel();
+        MainPanel = new javax.swing.JPanel();
+        DatesPanel = new javax.swing.JPanel();
+        StartDatePanel = new javax.swing.JPanel();
+        StartDateLabel = new javax.swing.JLabel();
+        StartDateField1 = new javax.swing.JTextField();
+        DueDatePanel = new javax.swing.JPanel();
+        DueDateLabel = new javax.swing.JLabel();
+        DueDateField = new javax.swing.JTextField();
+        EndDatePanel = new javax.swing.JPanel();
+        EndDateLabel = new javax.swing.JLabel();
+        StartDateField = new javax.swing.JTextField();
+        UtilityBillPanel = new javax.swing.JPanel();
+        PayBillPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+        setSize(new java.awt.Dimension(478, 516));
+
+        HeaderPanel.setPreferredSize(new java.awt.Dimension(0, 26));
+
+        BillSummaryLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BillSummaryLabel.setText("BILL SUMMARY");
+
+        javax.swing.GroupLayout HeaderPanelLayout = new javax.swing.GroupLayout(HeaderPanel);
+        HeaderPanel.setLayout(HeaderPanelLayout);
+        HeaderPanelLayout.setHorizontalGroup(
+            HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(HeaderPanelLayout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(BillSummaryLabel)
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+        HeaderPanelLayout.setVerticalGroup(
+            HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HeaderPanelLayout.createSequentialGroup()
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addComponent(BillSummaryLabel))
+        );
+
+        MainPanel.setPreferredSize(new java.awt.Dimension(478, 516));
+
+        DatesPanel.setPreferredSize(new java.awt.Dimension(478, 80));
+
+        StartDatePanel.setPreferredSize(new java.awt.Dimension(239, 30));
+
+        StartDateLabel.setText("Start Date:");
+
+        StartDateField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartDateField1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout StartDatePanelLayout = new javax.swing.GroupLayout(StartDatePanel);
+        StartDatePanel.setLayout(StartDatePanelLayout);
+        StartDatePanelLayout.setHorizontalGroup(
+            StartDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StartDatePanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(StartDateLabel)
+                .addContainerGap(151, Short.MAX_VALUE))
+            .addGroup(StartDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StartDatePanelLayout.createSequentialGroup()
+                    .addContainerGap(116, Short.MAX_VALUE)
+                    .addComponent(StartDateField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(23, 23, 23)))
+        );
+        StartDatePanelLayout.setVerticalGroup(
+            StartDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(StartDatePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(StartDateLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(StartDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StartDatePanelLayout.createSequentialGroup()
+                    .addContainerGap(16, Short.MAX_VALUE)
+                    .addComponent(StartDateField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+
+        DueDatePanel.setPreferredSize(new java.awt.Dimension(478, 30));
+
+        DueDateLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        DueDateLabel.setForeground(new java.awt.Color(255, 0, 51));
+        DueDateLabel.setText("Due Date:");
+
+        javax.swing.GroupLayout DueDatePanelLayout = new javax.swing.GroupLayout(DueDatePanel);
+        DueDatePanel.setLayout(DueDatePanelLayout);
+        DueDatePanelLayout.setHorizontalGroup(
+            DueDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DueDatePanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(DueDateLabel)
+                .addGap(18, 18, 18)
+                .addComponent(DueDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        DueDatePanelLayout.setVerticalGroup(
+            DueDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DueDatePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(DueDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DueDateLabel)
+                    .addComponent(DueDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        EndDatePanel.setPreferredSize(new java.awt.Dimension(478, 30));
+
+        EndDateLabel.setText("End Date:");
+
+        StartDateField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StartDateFieldActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout EndDatePanelLayout = new javax.swing.GroupLayout(EndDatePanel);
+        EndDatePanel.setLayout(EndDatePanelLayout);
+        EndDatePanelLayout.setHorizontalGroup(
+            EndDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EndDatePanelLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(EndDateLabel)
+                .addGap(27, 27, 27)
+                .addComponent(StartDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(262, Short.MAX_VALUE))
+        );
+        EndDatePanelLayout.setVerticalGroup(
+            EndDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EndDatePanelLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addGroup(EndDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EndDateLabel)
+                    .addComponent(StartDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout DatesPanelLayout = new javax.swing.GroupLayout(DatesPanel);
+        DatesPanel.setLayout(DatesPanelLayout);
+        DatesPanelLayout.setHorizontalGroup(
+            DatesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatesPanelLayout.createSequentialGroup()
+                .addGroup(DatesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DatesPanelLayout.createSequentialGroup()
+                        .addComponent(StartDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(DueDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(EndDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        DatesPanelLayout.setVerticalGroup(
+            DatesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DatesPanelLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(DatesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(StartDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DueDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(EndDatePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(DatesPanel);
+
+        UtilityBillPanel.setPreferredSize(new java.awt.Dimension(478, 330));
+        UtilityBillPanel.setLayout(new java.awt.GridBagLayout());
+        MainPanel.add(UtilityBillPanel);
+
+        PayBillPanel.setPreferredSize(new java.awt.Dimension(478, 100));
+
+        jButton1.setBackground(new java.awt.Color(0, 128, 236));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("PAY BILL");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PayBillPanelLayout = new javax.swing.GroupLayout(PayBillPanel);
+        PayBillPanel.setLayout(PayBillPanelLayout);
+        PayBillPanelLayout.setHorizontalGroup(
+            PayBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PayBillPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        PayBillPanelLayout.setVerticalGroup(
+            PayBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PayBillPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+
+        MainPanel.add(PayBillPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void StartDateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartDateFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StartDateFieldActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void StartDateField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartDateField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StartDateField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +298,21 @@ public class PayRent extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BillSummaryLabel;
+    private javax.swing.JPanel DatesPanel;
+    private javax.swing.JTextField DueDateField;
+    private javax.swing.JLabel DueDateLabel;
+    private javax.swing.JPanel DueDatePanel;
+    private javax.swing.JLabel EndDateLabel;
+    private javax.swing.JPanel EndDatePanel;
+    private javax.swing.JPanel HeaderPanel;
+    private javax.swing.JPanel MainPanel;
+    private javax.swing.JPanel PayBillPanel;
+    private javax.swing.JTextField StartDateField;
+    private javax.swing.JTextField StartDateField1;
+    private javax.swing.JLabel StartDateLabel;
+    private javax.swing.JPanel StartDatePanel;
+    private javax.swing.JPanel UtilityBillPanel;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }
