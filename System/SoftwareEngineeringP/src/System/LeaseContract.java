@@ -25,6 +25,7 @@ public class LeaseContract implements PaymentGateway {
     enum frequency {monthly, tri_annual, bi_annual, yearly}
     
     frequency PaymentFrequency;
+    double frequency;
     double TotalRentPrice, Discount;
     String Start_Date,End_Date,Next_Due;
     Tenant T;
@@ -34,6 +35,20 @@ public class LeaseContract implements PaymentGateway {
     
     public LeaseContract(String SD, String ED, String ND, Tenant t, Store s, double rent, double disc, frequency f){
         PaymentFrequency = f;
+        switch(PaymentFrequency) {
+      case monthly:
+        frequency=1.0;
+        break;
+      case tri_annual:
+         frequency=4.0;
+        break;
+      case bi_annual:
+        frequency=6.0;
+        break;
+      case yearly:
+        frequency=12.0;
+        break;
+    }
         TotalRentPrice = rent;
         Discount = disc;
         Start_Date = SD;
@@ -57,7 +72,7 @@ public class LeaseContract implements PaymentGateway {
         return total;
     }
     
-    private double AddRentPayment(double total, String CurrentDue){
+    public double AddRentPayment(double total){
         int i;
         for(i = 0; i < DuePayments.size();i++){
            if(DuePayments.get(i).getDueDate() == Next_Due){

@@ -13,9 +13,9 @@ public class Tenant extends Customer{
 
     
     //add attributes
-    private String TenantID;
-    private ArrayList<LeaseContract> Lease_Contract;
-    private ArrayList<Card> Card; 
+    String TenantID;
+    ArrayList<LeaseContract> Lease_Contract;
+    ArrayList<Card> Card; 
     
     public Tenant(String n, int p_num, String email, String tID) {
         super(n, p_num, email);

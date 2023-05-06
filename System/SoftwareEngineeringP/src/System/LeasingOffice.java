@@ -27,10 +27,10 @@ public class LeasingOffice {
     }
     
     public void SelectAppDetails(LeasingAgent Ag, String Dat, String Time){
-       // Appointment App = new Appointment(Ag, Dat, Time, Cart);
+       //Appointment App = new Appointment(Ag, Dat, Time, Cart);
 
-        //Ag.AddAppointment(App);
-        //Ag.SendNotif();
+       //Ag.AddAppointment(App);
+       //Ag.SendNotif();
         //Display Confirmation Message
     }
     

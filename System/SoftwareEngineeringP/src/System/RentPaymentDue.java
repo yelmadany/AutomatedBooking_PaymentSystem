@@ -16,8 +16,17 @@ public class RentPaymentDue {
     private double installment_amount;
     private LeaseContract LC;
     
+    public RentPaymentDue(String _Due_Date,  LeaseContract _LC){
+    LC=_LC;
+    Due_Date=_Due_Date;
+    
+    installment_amount=LC.SubtractDiscount(LC.TotalRentPrice)/LC.frequency;
+}
+    
     public double getRentPayment(){
+        
         return installment_amount;
+        
     }
     
     public String getDueDate(){

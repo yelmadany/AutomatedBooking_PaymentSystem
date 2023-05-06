@@ -10,9 +10,9 @@ package System;
  */
 public class Customer {
     
-    private String Name;
-    private int Phone_Number;
-    private String Email_Address;
+    String Name;
+    int Phone_Number;
+    String Email_Address;
     
     public Customer(String n, int p_num, String email) {
         this.Name = n;

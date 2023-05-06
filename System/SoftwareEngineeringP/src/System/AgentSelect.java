@@ -9,7 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;  
 import java.util.Date;  
 import java.util.Calendar;  
-
+import java.time.DayOfWeek;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -407,10 +407,17 @@ public class AgentSelect extends javax.swing.JFrame {
         try {
             String dayName = f.format(sdf.parse(dateTxt));
             
-            System.out.println("Day Name: "+ f.format(sdf.parse(dateTxt)));
+            System.out.println("Day Name: "+ f.format(sdf.parse(dateTxt)).toUpperCase());
         } catch (ParseException ex) {
             Logger.getLogger(AgentSelect.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        // leasing office has list of agents
+        // each agent has a schedule
+        // display schedule based on agent name
+        // 
+        
+        // ArrayList<ArrayList<Boolean>> schedules = Schedule.schedule_timings;
     }//GEN-LAST:event_CheckAvailabilityButtonActionPerformed
 
     private void ConfirmApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmApptButtonActionPerformed

@@ -1045,18 +1045,6 @@ public class MainMenu extends javax.swing.JFrame {
              label.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 18));
              JOptionPane.showMessageDialog(null, label, "ERROR", JOptionPane.INFORMATION_MESSAGE);
              
-//    ArrayList<ArrayList<String>> schedule_timings = new ArrayList<>(7);
-//    for (ArrayList<String>  arrayStr : schedule_timings){
-//        arrayStr = new ArrayList(10);
-//        for (String str: arrayStr) {
-//            str = "Yolo";
-//                        arrayStr.add(str);
-//                        System.out.println(arrayStr.get(0));
-//        }
-//        schedule_timings.add(arrayStr);        
-//        System.out.println(arrayStr);
-//    }
-//    System.out.println(schedule_timings);
     
         }
         else{

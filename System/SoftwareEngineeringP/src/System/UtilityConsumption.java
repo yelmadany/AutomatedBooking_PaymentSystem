@@ -31,7 +31,7 @@ public class UtilityConsumption {
         this.store = s;
         this.Total_Utility_Price = Electricity_Consumption + Waste_Consumption + Water_Consumption;
     }
-    public double GetTotalUtilityPrice(Date d) {
+    public double GetTotalUtilityPrice() {
         return this.Total_Utility_Price;
     }
 }

@@ -36,14 +36,38 @@ public class Store {
     }
     
     public double GetUnifiedBill() {
-        return 1;
-    }
-    
-    public void RequestVerifyTransaction(int i, Date d) {
-       // please work
-    }
-    
-    public void RequestPay(Card c, int i) {
+        double Total_util=0;
+        double unifiedBill=0;
+        double freq=lease_c.frequency;
         
+    
+        for(int i=0; i<freq;i++){
+            Total_util= Total_util+ Util_con.get(i).GetTotalUtilityPrice();
+        }
+        unifiedBill=unifiedBill + Total_util;
+        
+        
+        for(int i=0; i<Maint_req.size();i++){
+            unifiedBill=unifiedBill + Maint_req.get(i).GetMisuseCharges();
+            Maint_req.get(i).misue_charge=0;
+            
+            
+        }
+        
+        double rent_p=(lease_c.AddRentPayment(lease_c.TotalRentPrice));
+        unifiedBill=unifiedBill +rent_p;
+        
+        
+        return unifiedBill;
+  } 
+        
+       
+    public boolean RequestVerifyTransaction(int i, Date d) {
+       // please work
+       return true;
+    }
+    
+    public boolean RequestPay(Card c, int i) {
+        return true;
     }
 }

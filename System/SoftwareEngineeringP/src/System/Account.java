@@ -10,11 +10,11 @@ package System;
  */
 public class Account {
     
-    private String Username;
-    private String Password;
-    private String Type;
-    private LeasingAgent Leasing_Agent;
-    private Customer Customer;
+    String Username;
+    String Password;
+    String Type;
+    LeasingAgent Leasing_Agent;
+    Customer Customer;
     
     public Account(String u, String p, String t) {
         this.Username = u;

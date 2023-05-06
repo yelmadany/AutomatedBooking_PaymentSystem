@@ -10,7 +10,7 @@ package System;
  */
 public class PotentialTenant extends Customer{
 
-    private final String GuestID;
+    String GuestID;
     
     public PotentialTenant(String n, int p_num, String email,String gID) {
         super(n,p_num,email);
