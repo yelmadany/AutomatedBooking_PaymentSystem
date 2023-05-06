@@ -57,15 +57,30 @@ public class AgentSelect extends javax.swing.JFrame {
         }
     }
     
-    private void displaySched(LeasingAgent Ag) {
-        Enumeration elements = GroupOfTimingsButtonGroup.getElements();
+    private void displaySched(LeasingAgent Ag, String dayName) {
+        // finds the correcet day of the week
         
-        while (elements.hasMoreElements()) {
-            AbstractButton button = (AbstractButton)elements.nextElement();
-            Ag.GetAgentSchedule().get_Sched();
-            
-            button.setEnabled(false);
-//            System.out.println(button.getText());
+        int correctDayOfWeek = 0;
+        
+        for (int i = 1; i <= 7; ++i) {
+            if (DayOfWeek.of(i).name().equals(dayName))
+                correctDayOfWeek = i - 1;
+        }
+        
+        ArrayList<ArrayList<Boolean>> sched = Ag.GetAgentSchedule().get_Sched();
+
+        // gets the RadioButtons from ButtonGroup
+        Enumeration elements = GroupOfTimingsButtonGroup.getElements();  
+        AbstractButton button; 
+        
+        for (Boolean bool : sched.get(correctDayOfWeek)) {
+            button = (AbstractButton)elements.nextElement();
+            if (bool) {
+                button.setEnabled(true);
+            }
+            else {
+                button.setEnabled(false);
+            }
         }
     }
     
@@ -277,8 +292,15 @@ public class AgentSelect extends javax.swing.JFrame {
         AvailableTimeLabel.setText("Available Times: [Select 1]");
 
         j0800_0900RadioButton.setText("0800 - 0900");
+        j0800_0900RadioButton.setEnabled(false);
+        j0800_0900RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j0800_0900RadioButtonActionPerformed(evt);
+            }
+        });
 
         j0900_1000RadioButton.setText("0900 - 1000");
+        j0900_1000RadioButton.setEnabled(false);
         j0900_1000RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 j0900_1000RadioButtonActionPerformed(evt);
@@ -286,6 +308,7 @@ public class AgentSelect extends javax.swing.JFrame {
         });
 
         j1000_1100RadioButton.setText("1000 - 1100");
+        j1000_1100RadioButton.setEnabled(false);
         j1000_1100RadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 j1000_1100RadioButtonActionPerformed(evt);
@@ -293,18 +316,60 @@ public class AgentSelect extends javax.swing.JFrame {
         });
 
         j1100_1200RadioButton.setText("1100 - 1200");
+        j1100_1200RadioButton.setEnabled(false);
+        j1100_1200RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1100_1200RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1200_1300RadioButton.setText("1200 - 1300");
+        j1200_1300RadioButton.setEnabled(false);
+        j1200_1300RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1200_1300RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1400_1500RadioButton.setText("1400 - 1500");
+        j1400_1500RadioButton.setEnabled(false);
+        j1400_1500RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1400_1500RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1300_1400RadioButton.setText("1300 - 1400");
+        j1300_1400RadioButton.setEnabled(false);
+        j1300_1400RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1300_1400RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1500_1600RadioButton.setText("1500 - 1600");
+        j1500_1600RadioButton.setEnabled(false);
+        j1500_1600RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1500_1600RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1600_1700RadioButton.setText("1600 - 1700");
+        j1600_1700RadioButton.setEnabled(false);
+        j1600_1700RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1600_1700RadioButtonActionPerformed(evt);
+            }
+        });
 
         j1700_1800RadioButton.setText("1700 - 1800");
+        j1700_1800RadioButton.setEnabled(false);
+        j1700_1800RadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                j1700_1800RadioButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -405,11 +470,7 @@ public class AgentSelect extends javax.swing.JFrame {
     }//GEN-LAST:event_DateTxtFieldActionPerformed
 
     private void ShowCalendarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowCalendarButtonActionPerformed
-        CalendarDateChooser.showPopup();
-
-        
-
-        
+        CalendarDateChooser.showPopup();        
     }//GEN-LAST:event_ShowCalendarButtonActionPerformed
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
@@ -419,33 +480,34 @@ public class AgentSelect extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");  
 
         Format f = new SimpleDateFormat("EEEE");  
-        
+        String dayName;
         try {
-            String dayName = f.format(sdf.parse(dateTxt));
-            
-            System.out.println("Day Name: "+ f.format(sdf.parse(dateTxt)).toUpperCase());
+            dayName = f.format(sdf.parse(dateTxt)).toUpperCase();
+//            System.out.println("Day Name: "+ DayOfWeek.of(7));
+            // leasing office has list of agents
+            // each agent has a schedule
+            // display schedule based on agent name
+
+            String agent_name = AgentComboBox.getSelectedItem().toString();
+
+            // clear all selected radio buttons
+            GroupOfTimingsButtonGroup.clearSelection();
+
+            for (LeasingAgent ag : L.Agents) {
+                if (ag.name.equals(agent_name)){
+                    displaySched(ag, dayName);
+                    break;
+                }
+            }
         } catch (ParseException ex) {
             Logger.getLogger(AgentSelect.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        // leasing office has list of agents
-        // each agent has a schedule
-        // display schedule based on agent name
-        // 
-        String agent_name = AgentComboBox.getSelectedItem().toString();
-//                displaySched();
+        }            
 
-        for (LeasingAgent ag : L.Agents)
-            if (ag.name.equals(agent_name)){
-                displaySched(ag);
-                break;
-            }
-                
-        // ArrayList<ArrayList<Boolean>> schedules = Schedule.schedule_timings;
     }//GEN-LAST:event_CheckAvailabilityButtonActionPerformed
 
     private void ConfirmApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmApptButtonActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_ConfirmApptButtonActionPerformed
 
     private void AgentComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentComboBoxActionPerformed
@@ -454,11 +516,62 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void j0900_1000RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j0900_1000RadioButtonActionPerformed
         // TODO add your handling code here:
+                ConfirmApptButton.setEnabled(true);
+
     }//GEN-LAST:event_j0900_1000RadioButtonActionPerformed
 
     private void j1000_1100RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1000_1100RadioButtonActionPerformed
         // TODO add your handling code here:
+                ConfirmApptButton.setEnabled(true);
+
     }//GEN-LAST:event_j1000_1100RadioButtonActionPerformed
+
+    private void j0800_0900RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j0800_0900RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+    }//GEN-LAST:event_j0800_0900RadioButtonActionPerformed
+
+    private void j1100_1200RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1100_1200RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+
+    }//GEN-LAST:event_j1100_1200RadioButtonActionPerformed
+
+    private void j1200_1300RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1200_1300RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+
+    }//GEN-LAST:event_j1200_1300RadioButtonActionPerformed
+
+    private void j1300_1400RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1300_1400RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+
+    }//GEN-LAST:event_j1300_1400RadioButtonActionPerformed
+
+    private void j1400_1500RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1400_1500RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+        
+    }//GEN-LAST:event_j1400_1500RadioButtonActionPerformed
+
+    private void j1500_1600RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1500_1600RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+        
+    }//GEN-LAST:event_j1500_1600RadioButtonActionPerformed
+
+    private void j1600_1700RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1600_1700RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+
+    }//GEN-LAST:event_j1600_1700RadioButtonActionPerformed
+
+    private void j1700_1800RadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_j1700_1800RadioButtonActionPerformed
+        // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(true);
+
+    }//GEN-LAST:event_j1700_1800RadioButtonActionPerformed
 
     /**
      * @param args the command line arguments

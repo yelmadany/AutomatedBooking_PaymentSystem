@@ -380,11 +380,16 @@
                 <Component class="javax.swing.JRadioButton" name="j0800_0900RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0800 - 0900"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j0800_0900RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j0900_1000RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="0900 - 1000"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j0900_1000RadioButtonActionPerformed"/>
@@ -393,6 +398,7 @@
                 <Component class="javax.swing.JRadioButton" name="j1000_1100RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1000 - 1100"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1000_1100RadioButtonActionPerformed"/>
@@ -401,37 +407,65 @@
                 <Component class="javax.swing.JRadioButton" name="j1100_1200RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1100 - 1200"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1100_1200RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1200_1300RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1200 - 1300"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1200_1300RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1400_1500RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1400 - 1500"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1400_1500RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1300_1400RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1300 - 1400"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1300_1400RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1500_1600RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1500 - 1600"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1500_1600RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1600_1700RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1600 - 1700"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1600_1700RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="j1700_1800RadioButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="1700 - 1800"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="j1700_1800RadioButtonActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
