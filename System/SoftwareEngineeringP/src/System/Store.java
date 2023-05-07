@@ -14,13 +14,13 @@ public class Store {
     public String Location;
     public String Space;
     public double Rental_rate;
-    private String Classifier;
-    private String Purpose;
+    public String Classifier;
+    public String Purpose;
     public char Rank;
-    private LeaseContract lease_c;
-    private ArrayList<MaintenanceRequest> Maint_req;
-    private ArrayList<Appointment> Appt;
-    private ArrayList<UtilityConsumption> Util_con;
+    public LeaseContract lease_c;
+    public ArrayList<MaintenanceRequest> Maint_req;
+    public ArrayList<Appointment> Appt;
+    public ArrayList<UtilityConsumption> Util_con;
     
     public Store(String loc, String space, double r_rate, String classy, String purp, char rank){
         this.Location = loc;

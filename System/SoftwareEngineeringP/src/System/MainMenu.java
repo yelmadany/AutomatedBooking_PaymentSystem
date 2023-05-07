@@ -19,6 +19,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     LeasingOffice L;
     ArrayList<Store> Cart;
+    static ArrayList<String> StoreLocations = new ArrayList(5);
+    static ArrayList<String> StoreNames = new ArrayList(5);
     int i = 0;
     javax.swing.GroupLayout AddPropertiesLayout;
     /**
@@ -36,6 +38,14 @@ public class MainMenu extends javax.swing.JFrame {
         setSize(750, 550);
         AddPropertiesLayout = new javax.swing.GroupLayout(AddProperties);
         AddProperties.setLayout(AddPropertiesLayout);
+        
+        StoreLocations.add(LocationText.getText());
+        StoreLocations.add(LocationText5.getText());
+        StoreLocations.add(LocationText6.getText());
+        StoreLocations.add(LocationText7.getText());
+        StoreLocations.add(LocationText4.getText());
+        
+        
         CartStore1Button.setVisible(false);
         CartStore2Button.setVisible(false);
         CartStore3Button.setVisible(false);
@@ -1050,7 +1060,7 @@ public class MainMenu extends javax.swing.JFrame {
         else{
             //MainMenuSignOutButton.isVisible()
             if(true){
-            L.MakeAppointment();
+            L.MakeAppointment(Cart);
             this.dispose();
             }
             else{

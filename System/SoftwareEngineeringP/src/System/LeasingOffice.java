@@ -5,7 +5,7 @@
 package System;
 
 import java.util.*;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Yo200
@@ -20,18 +20,30 @@ public class LeasingOffice {
      Agents = new ArrayList();
     }
     
-    public void MakeAppointment(){ 
+    public void MakeAppointment(ArrayList<Store> Cart){ 
         //Display Schedules
-            AgentSelect Agt = new AgentSelect(this);
+            
+            AgentSelect Agt = new AgentSelect(this, Cart);
             Agt.setVisible(true);
     }
     
-    public void SelectAppDetails(LeasingAgent Ag, String Dat, String Time){
-       //Appointment App = new Appointment(Ag, Dat, Time, Cart);
+    public void SelectAppDetails(LeasingAgent Ag, String Date, String Time, String Day, ArrayList<Store> Cart){
+        
+       Appointment App = new Appointment(Ag, Date, Time, Day, Cart.get(0).Location, Cart);
+       
+       Ag.AddAppointment(App);
+       Ag.SendNotif();
 
-       //Ag.AddAppointment(App);
-       //Ag.SendNotif();
         //Display Confirmation Message
+        String strBuilder = "";
+        
+        for (Store store: Cart) {
+            strBuilder += "\nThe location is at " + store.Location + " with space " + store.Space + " with Rank " + store.Rank + " with a purpose of " + store.Purpose + " at a price of " + store.Rental_rate + ".\n";
+        }
+        
+        int input = JOptionPane.showConfirmDialog(null, "Email has been sent to confirm the booking at " + App.meetup_Location + " at " + App.time + " on " + App.day + " with " + App.agent.name +  " as your agent for\n" + strBuilder + "\nThank you!", "BOOKING CONFIRMED", JOptionPane.DEFAULT_OPTION);
+                 
+        
     }
     
     public void OpenPaymentMenu(Store S){

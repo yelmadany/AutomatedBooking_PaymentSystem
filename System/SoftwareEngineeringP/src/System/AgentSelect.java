@@ -31,8 +31,15 @@ public class AgentSelect extends javax.swing.JFrame {
      * Creates new form AgentSelect
      */
     LeasingOffice L;
+    LeasingAgent Agent;
+    ArrayList<Store> Cart;
+    String Date;
+    String Day;
+    String Time;
+    
     //ArrayList<Schedule> WSched;
-    public AgentSelect(LeasingOffice LO) {
+    public AgentSelect(LeasingOffice LO, ArrayList<Store> cart) {
+        Cart = cart;
         L = LO;
         initComponents();
         dpopulate();
@@ -475,6 +482,7 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
         // TODO add your handling code here:
+        ConfirmApptButton.setEnabled(false);
         String dateTxt = DateTxtField.getText();
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");  
@@ -495,7 +503,9 @@ public class AgentSelect extends javax.swing.JFrame {
 
             for (LeasingAgent ag : L.Agents) {
                 if (ag.name.equals(agent_name)){
+                    this.Agent = ag;                    
                     displaySched(ag, dayName);
+                    this.Day = dayName;
                     break;
                 }
             }
@@ -507,7 +517,20 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void ConfirmApptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmApptButtonActionPerformed
         // TODO add your handling code here:
+        Enumeration elements = GroupOfTimingsButtonGroup.getElements();  
+        AbstractButton button; 
         
+        while (elements.hasMoreElements()) {
+            button = (AbstractButton)elements.nextElement();
+            if (button.isSelected()) {
+                Time = button.getText();
+                this.Date = DateTxtField.getText();
+//                System.out.println(Time);
+                L.SelectAppDetails(Agent, Date, Time, Day, this.Cart);
+                
+                break;
+            }      
+        }  
     }//GEN-LAST:event_ConfirmApptButtonActionPerformed
 
     private void AgentComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgentComboBoxActionPerformed

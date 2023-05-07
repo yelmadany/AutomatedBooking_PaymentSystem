@@ -13,17 +13,18 @@ import java.util.ArrayList;
 public class Appointment {
     //Usmani do ur thing
     String time;
-    String Day;
+    String date;
+    String day;
     String meetup_Location;
     LeasingAgent agent;
-    ArrayList<Store> Cart = new ArrayList<Store>();
+    ArrayList<Store> Cart;
     
-    public Appointment(LeasingAgent ag, String _time, String _day, String Loc, ArrayList<Store> _Cart){
+    public Appointment(LeasingAgent ag, String _date, String _time, String _day, String Loc, ArrayList<Store> _Cart){
+        date = _date;
         time=_time;
-        Day=_day;
+        day=_day;
         meetup_Location=Loc;
         agent=ag;
         Cart=_Cart;
-    }
-    
+    }    
 }
