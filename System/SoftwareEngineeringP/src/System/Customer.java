@@ -11,10 +11,10 @@ package System;
 public class Customer {
     
     String Name;
-    int Phone_Number;
+    String Phone_Number;
     String Email_Address;
     
-    public Customer(String n, int p_num, String email) {
+    public Customer(String n, String p_num, String email) {
         this.Name = n;
         this.Phone_Number = p_num;
         this.Email_Address = email;

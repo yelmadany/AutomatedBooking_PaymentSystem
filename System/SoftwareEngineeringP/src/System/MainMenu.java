@@ -19,6 +19,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     LeasingOffice L;
     ArrayList<Store> Cart;
+    Tenant t;
     static ArrayList<String> StoreLocations = new ArrayList(5);
     static ArrayList<String> StoreNames = new ArrayList(5);
     int i = 0;
@@ -1074,6 +1075,18 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void MainMenuPayRentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuPayRentButtonActionPerformed
         // TODO add your handling code here:
+        if(MainMenuSignOutButton.isVisible()){
+            
+            LeasingOffice LO=new LeasingOffice();
+            this.dispose();
+            LO.OpenPaymentMenu(t);
+            
+            }
+            else{
+             javax.swing.JLabel label = new javax.swing.JLabel("Login First.");
+             label.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 18));
+             JOptionPane.showMessageDialog(null, label, "ERROR", JOptionPane.INFORMATION_MESSAGE);
+            }
     }//GEN-LAST:event_MainMenuPayRentButtonActionPerformed
 
     private void MainMenuFilteringComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MainMenuFilteringComboBoxActionPerformed
@@ -1274,7 +1287,8 @@ public class MainMenu extends javax.swing.JFrame {
        
     }
     
-    void login(){
+    void login(Tenant tt){
+        t=tt;
         MainMenuPayRentButton.setVisible(true);
         MainMenuSignOutButton.setVisible(true);
         MainMenuLoginButton.setVisible(false);

@@ -18,4 +18,7 @@ public class PaymentPaid {
         DatePaid = dp;
         Time = t;
     }
+    public PaymentPaid(double a){
+         amount = a;
+    }
 }

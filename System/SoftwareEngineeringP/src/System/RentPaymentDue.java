@@ -4,6 +4,10 @@
  */
 package System;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author Yo200
@@ -11,12 +15,13 @@ package System;
 public class RentPaymentDue {
     
     //Implementation Done
-    
-    private String Due_Date;
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");	
+    Calendar Due_Date = new GregorianCalendar();
+    //private String Due_Date;
     private double installment_amount;
     private LeaseContract LC;
     
-    public RentPaymentDue(String _Due_Date,  LeaseContract _LC){
+    public RentPaymentDue(Calendar _Due_Date,  LeaseContract _LC){
     LC=_LC;
     Due_Date=_Due_Date;
     
@@ -29,7 +34,7 @@ public class RentPaymentDue {
         
     }
     
-    public String getDueDate(){
+    public Calendar getDueDate(){
         return Due_Date;
     }
     

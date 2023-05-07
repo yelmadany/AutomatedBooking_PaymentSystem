@@ -11,6 +11,7 @@ import java.util.Date;
  * @author Yo200
  */
 public class Store {
+    int id;
     public String Location;
     public String Space;
     public double Rental_rate;
@@ -22,17 +23,24 @@ public class Store {
     public ArrayList<Appointment> Appt;
     public ArrayList<UtilityConsumption> Util_con;
     
-    public Store(String loc, String space, double r_rate, String classy, String purp, char rank){
+
+
+    public Store(int _id,String loc, String space, double r_rate, String classy, String purp, char rank) {
+          this.id=_id;
         this.Location = loc;
         this.Space = space;
         this.Rental_rate = r_rate;
         this.Classifier = classy;
         this.Purpose = purp;
         this.Rank = rank;
-        //this.lease_c = lea_c;
+        
         this.Maint_req = new ArrayList();
         this.Appt = new ArrayList();
         this.Util_con = new ArrayList();
+    }
+    
+    public void setLease(LeaseContract _lease_c){
+        this.lease_c = _lease_c;
     }
     
     public double GetUnifiedBill() {
@@ -40,8 +48,8 @@ public class Store {
         double unifiedBill=0;
         double freq=lease_c.frequency;
         
-    
-        for(int i=0; i<freq;i++){
+   
+        for(int i=0; i<(int)freq;i++){
             Total_util= Total_util+ Util_con.get(i).GetTotalUtilityPrice();
         }
         unifiedBill=unifiedBill + Total_util;
@@ -49,14 +57,13 @@ public class Store {
         
         for(int i=0; i<Maint_req.size();i++){
             unifiedBill=unifiedBill + Maint_req.get(i).GetMisuseCharges();
-            Maint_req.get(i).misue_charge=0;
+            //Maint_req.get(i).misue_charge=0;
             
             
         }
         
-        double rent_p=(lease_c.AddRentPayment(lease_c.TotalRentPrice));
+        double rent_p=(lease_c.AddRentPayment(lease_c.TotalRentPrice,lease_c.frequency));
         unifiedBill=unifiedBill +rent_p;
-        
         
         return unifiedBill;
   } 
@@ -67,7 +74,8 @@ public class Store {
        return true;
     }
     
-    public boolean RequestPay(Card c, int i) {
+    public boolean RequestPay(Card c, double i) {
+        
         return true;
     }
 }

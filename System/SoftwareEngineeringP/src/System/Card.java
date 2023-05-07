@@ -13,7 +13,7 @@ public class Card {
     String ExpDate;
     int Card_Numb;
     
-    public Card(String E_Date, int c_num){
+    public Card(int c_num, String E_Date){
         ExpDate=E_Date;
     Card_Numb=c_num;
     }

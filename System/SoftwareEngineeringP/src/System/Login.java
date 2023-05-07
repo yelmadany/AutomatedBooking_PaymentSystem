@@ -4,7 +4,12 @@
  */
 package System;
 
+import static System.LeaseContract.frequency.monthly;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 /**
  *
  * @author Yo200
@@ -400,9 +405,41 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginLoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginLoginButtonActionPerformed
         // TODO add your handling code here:
+         SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");	
+    Calendar S_Date = new GregorianCalendar(2013,10,28);
+    Calendar N_Date = new GregorianCalendar(2014,10,28);
+           Store store11 = new Store(11,"Dubai", "3000 sqft", 8000.0, "Retail", "Cosmetics", 'A');
+           
+        
+        Tenant t1=new Tenant("Zinati", "555-4325", "Zinati@aus.edu", "001");
+        LeaseContract LC1 = new LeaseContract(S_Date, N_Date, t1,  store11, 7000.0, 100.0, monthly);
+        
+        store11.setLease(LC1);
+        
+        t1.Lease_Contract.add(LC1);
+        Card C =new Card(982244765,"10/5/28");
+        t1.Card.add(C);
+        MaintenanceRequest MR=new MaintenanceRequest(1,"1", "Plumbling", 50,"8pm");
+        MaintenanceRequest MR1=new MaintenanceRequest(2,"1", "Electricity", 80,"5pm");
+        UtilityConsumption Ut1= new UtilityConsumption(30, 40, 50, S_Date, store11 );
+        Calendar S2_Date = S_Date;
+        S2_Date.add(Calendar.MONTH, 1);
+        
+        UtilityConsumption Ut2= new UtilityConsumption(10, 50, 20, S2_Date, store11 );
+        t1.Lease_Contract.get(0).S.Maint_req.add(MR);
+        t1.Lease_Contract.get(0).S.Maint_req.add(MR1);
+        t1.Lease_Contract.get(0).S.Util_con.add(Ut1);
+        t1.Lease_Contract.get(0).S.Util_con.add(Ut2);
+        
+
+        
+        
+        
             this.dispose();
             MM.setVisible(true);
-            MM.login();
+            MM.login(t1);
+            
+            
     }//GEN-LAST:event_LoginLoginButtonActionPerformed
 
     private void LoginInputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginInputPasswordActionPerformed

@@ -4,7 +4,10 @@
  */
 package System;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -16,18 +19,23 @@ public class UtilityConsumption {
     private double Electricity_Consumption;
     private double Waste_Consumption;
     private double Total_Utility_Price;
-    private Date Start_Date;
-    private Date End_Date;
-    private Date Due_Date;
+   // private Date Start_Date;
+   // private Date End_Date;
+    //private Date Due_Date;
     private Store store;
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");	
+    Calendar Start_Date,Due_Date= new GregorianCalendar();
     
-    public UtilityConsumption (double water_c, double e_c, double waste_c, Date start, Date end, Date due, Store s ) {
+    
+    public UtilityConsumption (double water_c, double e_c, double waste_c, Calendar start, Store s ) {
         this.Water_Consumption = water_c;
         this.Electricity_Consumption = e_c;
         this.Waste_Consumption = waste_c;
         this.Start_Date = start;
-        this.End_Date = end;
-        this.Due_Date = due;
+        //this.End_Date = end;
+        this.Due_Date= this.Start_Date;
+        this.Due_Date.add(Calendar.MONTH, 1);
+       
         this.store = s;
         this.Total_Utility_Price = Electricity_Consumption + Waste_Consumption + Water_Consumption;
     }
