@@ -20,10 +20,10 @@ public class LeasingOffice {
      Agents = new ArrayList();
     }
     
-    public void MakeAppointment(ArrayList<Store> Cart){ 
+    public void MakeAppointment(ArrayList<Store> Cart, MainMenu M){ 
         //Display Schedules
             
-            AgentSelect Agt = new AgentSelect(this, Cart);
+            AgentSelect Agt = new AgentSelect(M,this, Cart);
             Agt.setVisible(true);
     }
     

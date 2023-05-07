@@ -36,9 +36,11 @@ public class AgentSelect extends javax.swing.JFrame {
     String Date;
     String Day;
     String Time;
+    MainMenu MM;
     
     //ArrayList<Schedule> WSched;
-    public AgentSelect(LeasingOffice LO, ArrayList<Store> cart) {
+    public AgentSelect(MainMenu M, LeasingOffice LO, ArrayList<Store> cart) {
+        MM = M;
         Cart = cart;
         L = LO;
         initComponents();
@@ -53,7 +55,7 @@ public class AgentSelect extends javax.swing.JFrame {
         GroupOfTimingsButtonGroup.add(j1500_1600RadioButton);
         GroupOfTimingsButtonGroup.add(j1600_1700RadioButton);
         GroupOfTimingsButtonGroup.add(j1700_1800RadioButton);
-        
+         jPanel8.setVisible(false);
         
     }
     private void dpopulate(){
@@ -91,9 +93,6 @@ public class AgentSelect extends javax.swing.JFrame {
         }
     }
     
-    void populateAgent(Schedule S){
-        
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -409,9 +408,9 @@ public class AgentSelect extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(AvailableTimeLabel)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(j0800_0900RadioButton)
-                    .addComponent(j1300_1400RadioButton))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(j1300_1400RadioButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(j0800_0900RadioButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(j0900_1000RadioButton)
@@ -482,6 +481,7 @@ public class AgentSelect extends javax.swing.JFrame {
 
     private void CheckAvailabilityButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckAvailabilityButtonActionPerformed
         // TODO add your handling code here:
+        jPanel8.setVisible(true);
         ConfirmApptButton.setEnabled(false);
         String dateTxt = DateTxtField.getText();
         
@@ -527,7 +527,10 @@ public class AgentSelect extends javax.swing.JFrame {
                 this.Date = DateTxtField.getText();
 //                System.out.println(Time);
                 L.SelectAppDetails(Agent, Date, Time, Day, this.Cart);
-                
+                this.dispose();
+                L.Stores.removeAll(Cart);
+                MM.reset();
+                MM.setVisible(true);
                 break;
             }      
         }  

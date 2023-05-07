@@ -32,7 +32,7 @@ public class MainMenu extends javax.swing.JFrame {
         L = LO;
         Cart = new ArrayList<Store>();
         initComponents();
-        populate(L);
+        
         MainMenuPayRentButton.setVisible(false);
         MainMenuSignOutButton.setVisible(false);
         setSize(750, 550);
@@ -43,14 +43,8 @@ public class MainMenu extends javax.swing.JFrame {
         StoreLocations.add(LocationText5.getText());
         StoreLocations.add(LocationText6.getText());
         StoreLocations.add(LocationText7.getText());
-        StoreLocations.add(LocationText4.getText());
-        
-        
-        CartStore1Button.setVisible(false);
-        CartStore2Button.setVisible(false);
-        CartStore3Button.setVisible(false);
-        CartStore4Button.setVisible(false);
-        CartStore5Button.setVisible(false);
+        StoreLocations.add(LocationText4.getText());                
+        reset();
     }
     
     /**
@@ -967,15 +961,15 @@ public class MainMenu extends javax.swing.JFrame {
         AddProperties.setLayout(AddPropertiesLayout);
         AddPropertiesLayout.setHorizontalGroup(
             AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddPropertiesLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
+            .addGroup(AddPropertiesLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(CartStore5Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CartStore4Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CartStore3Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CartStore2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(CartStore1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         AddPropertiesLayout.setVerticalGroup(
             AddPropertiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1058,10 +1052,10 @@ public class MainMenu extends javax.swing.JFrame {
     
         }
         else{
-            //MainMenuSignOutButton.isVisible()
-            if(true){
-            L.MakeAppointment(Cart);
-            this.dispose();
+            
+            if(MainMenuSignOutButton.isVisible()){
+            L.MakeAppointment(Cart, this);
+            this.setVisible(false);
             }
             else{
              javax.swing.JLabel label = new javax.swing.JLabel("Login First.");
@@ -1232,30 +1226,52 @@ public class MainMenu extends javax.swing.JFrame {
 
     
     public void populate(LeasingOffice LO){
+        
+        int count = LO.Stores.size();
+        
+        if(count > 0){
             PriceText.setText(Double.toString(LO.Stores.get(0).Rental_rate));
             RankText.setText(Character.toString(LO.Stores.get(0).Rank));
             SpaceText.setText(LO.Stores.get(0).Space);
             LocationText.setText(LO.Stores.get(0).Location);
+            jPanel5.setVisible(true);
+            count --;
+        }
             
+         if(count > 0){
             PriceText4.setText(Double.toString(LO.Stores.get(1).Rental_rate));
             RankText4.setText(Character.toString(LO.Stores.get(1).Rank));
             SpaceText4.setText(LO.Stores.get(1).Space);
             LocationText4.setText(LO.Stores.get(1).Location);
+             jPanel15.setVisible(true);
+             count--;
+         }
 
+          if(count > 0){
             PriceText5.setText(Double.toString(LO.Stores.get(2).Rental_rate));
             RankText5.setText(Character.toString(LO.Stores.get(2).Rank));
             SpaceText5.setText(LO.Stores.get(2).Space);
             LocationText5.setText(LO.Stores.get(2).Location);
-            
+            jPanel17.setVisible(true);
+            count--;
+          }
+           if(count > 0){ 
             PriceText6.setText(Double.toString(LO.Stores.get(3).Rental_rate));
             RankText6.setText(Character.toString(LO.Stores.get(3).Rank));
             SpaceText6.setText(LO.Stores.get(3).Space);
             LocationText6.setText(LO.Stores.get(3).Location);
-
+            jPanel19.setVisible(true);
+            count--;
+           }
+           
+            if(count > 0){
             PriceText7.setText(Double.toString(LO.Stores.get(4).Rental_rate));
             RankText7.setText(Character.toString(LO.Stores.get(4).Rank));
             SpaceText7.setText(LO.Stores.get(4).Space);
             LocationText7.setText(LO.Stores.get(4).Location);
+             jPanel13.setVisible(true);
+            }
+       
     }
     
     void login(){
@@ -1263,6 +1279,24 @@ public class MainMenu extends javax.swing.JFrame {
         MainMenuSignOutButton.setVisible(true);
         MainMenuLoginButton.setVisible(false);
         MainMenuSignUpButton.setVisible(false);
+    }
+    
+    void reset(){
+        Cart.removeAll(Cart);
+        
+        CartStore1Button.setVisible(false);
+        CartStore2Button.setVisible(false);
+        CartStore3Button.setVisible(false);
+        CartStore4Button.setVisible(false);
+        CartStore5Button.setVisible(false);
+        
+        jPanel5.setVisible(false);
+        jPanel15.setVisible(false);
+        jPanel17.setVisible(false);
+        jPanel19.setVisible(false);
+        jPanel13.setVisible(false);
+        
+        populate(L);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

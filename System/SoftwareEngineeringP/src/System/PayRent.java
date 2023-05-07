@@ -40,6 +40,14 @@ public class PayRent extends javax.swing.JFrame {
         EndDateLabel = new javax.swing.JLabel();
         StartDateField = new javax.swing.JTextField();
         UtilityBillPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         PayBillPanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -59,7 +67,7 @@ public class PayRent extends javax.swing.JFrame {
             .addGroup(HeaderPanelLayout.createSequentialGroup()
                 .addGap(186, 186, 186)
                 .addComponent(BillSummaryLabel)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
         HeaderPanelLayout.setVerticalGroup(
             HeaderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,7 +97,7 @@ public class PayRent extends javax.swing.JFrame {
             .addGroup(StartDatePanelLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(StartDateLabel)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
             .addGroup(StartDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StartDatePanelLayout.createSequentialGroup()
                     .addContainerGap(116, Short.MAX_VALUE)
@@ -155,7 +163,7 @@ public class PayRent extends javax.swing.JFrame {
                 .addComponent(EndDateLabel)
                 .addGap(27, 27, 27)
                 .addComponent(StartDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addContainerGap(263, Short.MAX_VALUE))
         );
         EndDatePanelLayout.setVerticalGroup(
             EndDatePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,7 +203,74 @@ public class PayRent extends javax.swing.JFrame {
         MainPanel.add(DatesPanel);
 
         UtilityBillPanel.setPreferredSize(new java.awt.Dimension(478, 330));
-        UtilityBillPanel.setLayout(new java.awt.GridBagLayout());
+
+        jLabel2.setText("Total Utility Consumption:");
+
+        jLabel3.setText("Total Maintainance Bill");
+
+        jLabel4.setText("Total Price");
+
+        jLabel5.setText("Total Rent Price:");
+
+        jButton2.setText("jButton2");
+
+        jButton3.setText("jButton2");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Enter Payment Option");
+        jLabel1.setToolTipText("");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout UtilityBillPanelLayout = new javax.swing.GroupLayout(UtilityBillPanel);
+        UtilityBillPanel.setLayout(UtilityBillPanelLayout);
+        UtilityBillPanelLayout.setHorizontalGroup(
+            UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UtilityBillPanelLayout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(UtilityBillPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(UtilityBillPanelLayout.createSequentialGroup()
+                .addGroup(UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UtilityBillPanelLayout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)))
+                .addGap(0, 11, Short.MAX_VALUE))
+        );
+        UtilityBillPanelLayout.setVerticalGroup(
+            UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(UtilityBillPanelLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(UtilityBillPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
         MainPanel.add(UtilityBillPanel);
 
         PayBillPanel.setPreferredSize(new java.awt.Dimension(478, 100));
@@ -237,14 +312,14 @@ public class PayRent extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, 0))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(HeaderPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
+                .addComponent(MainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE))
         );
 
         pack();
@@ -261,6 +336,10 @@ public class PayRent extends javax.swing.JFrame {
     private void StartDateField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartDateField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_StartDateField1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,6 +392,14 @@ public class PayRent extends javax.swing.JFrame {
     private javax.swing.JLabel StartDateLabel;
     private javax.swing.JPanel StartDatePanel;
     private javax.swing.JPanel UtilityBillPanel;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
